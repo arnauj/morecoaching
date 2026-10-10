@@ -1,0 +1,74 @@
+[
+  {
+    "id": "triatlon",
+    "title": "Coaching de Triatlón",
+    "short": "Planes semanales a medida para las tres disciplinas, con atletismo y fuerza, vía TrainingPeaks.",
+    "image": "/img/fotos/ciclismo",
+    "includes": [
+      "Entrevista inicial (anamnesis) y definición de objetivos",
+      "Planificación anual y de competiciones según tus objetivos",
+      "Planes semanales individuales para natación, bici y carrera + fuerza, en TrainingPeaks",
+      "Disponibilidad diaria por teléfono, email o WhatsApp",
+      "Reuniones periódicas de feedback",
+      "Tests de rendimiento y competiciones de control (opcional)",
+      "Estrategia de competición y nutrición para tu triatlón"
+    ],
+    "prices": [
+      { "label": "Suscripción mensual", "price": "119 €", "period": "/mes", "note": "Sin permanencia ni plazos de cancelación." },
+      { "label": "Suscripción 6 meses", "price": "109 €", "period": "/mes", "note": "Perfecta para preparar una competición concreta." },
+      { "label": "Suscripción 12 meses", "price": "99 €", "period": "/mes", "note": "Para trabajar a largo plazo al mejor precio." }
+    ],
+    "footnote": "La versión básica de TrainingPeaks es gratuita. La versión Premium (opcional) cuesta 9,90 €/mes."
+  },
+  {
+    "id": "running",
+    "title": "Coaching de Running",
+    "short": "Del primer 10K al maratón: entrenamiento individual adaptado a tu vida personal y profesional.",
+    "image": "/img/fotos/running",
+    "includes": [
+      "Anamnesis y definición de objetivos",
+      "Planificación de temporada y carreras",
+      "Plan semanal individual con trabajo de fuerza y técnica",
+      "Disponibilidad diaria por teléfono, email o WhatsApp",
+      "Tests de rendimiento y ajuste de zonas"
+    ],
+    "prices": [
+      { "label": "Suscripción mensual", "price": "Consultar", "period": "", "note": "Escríbenos y te preparamos una propuesta." }
+    ]
+  },
+  {
+    "id": "nutricion",
+    "title": "Nutrición deportiva",
+    "short": "Asesoramiento y coaching nutricional con Janina, Nutricionista con Licencia A.",
+    "image": "/img/fotos/david-janina",
+    "includes": [
+      "Entrevista inicial sobre salud y alimentación, y definición de objetivos",
+      "Análisis de un registro alimentario de 7 días",
+      "Sesión de coaching con recomendaciones individuales y plan de acción",
+      "Resumen por escrito de las medidas y recomendaciones clave",
+      "Coaching mensual: plan semanal adaptado a tu entrenamiento"
+    ],
+    "prices": [
+      { "label": "Asesoramiento nutricional", "price": "169 €", "period": "", "note": "129 € combinado con un coaching de resistencia o HYROX." },
+      { "label": "Sesión de seguimiento", "price": "99 €", "period": "", "note": "Análisis de un registro de 3–5 días y nuevas recomendaciones." },
+      { "label": "Coaching nutricional", "price": "99 €", "period": "/mes", "note": "89 €/mes combinado con un coaching de resistencia o HYROX." }
+    ]
+  },
+  {
+    "id": "diagnostico",
+    "title": "Diagnóstico del rendimiento",
+    "short": "Análisis de tu entrenamiento, test de lactato y espiroergometría para entrenar con datos.",
+    "image": "/img/fotos/ironman-lanzarote",
+    "includes": [
+      "Análisis de entrenamiento y salud con tus datos (Strava, TrainingPeaks…)",
+      "Test de lactato para definir zonas de entrenamiento",
+      "Sesión de coaching de 60 minutos con los resultados",
+      "Recomendaciones de entrenamiento, nutrición, material y estrategia",
+      "Premium: planificación anual + plan de ejemplo de 4 semanas"
+    ],
+    "prices": [
+      { "label": "Level Up Your Training · Basic", "price": "99 €", "period": "", "note": "Análisis + sesión de 60 min." },
+      { "label": "Level Up Your Training · Premium", "price": "199 €", "period": "", "note": "Basic + planificación anual y plan de 4 semanas." }
+    ]
+  }
+]

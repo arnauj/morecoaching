@@ -1,0 +1,30 @@
+---
+import Photo from './Photo.astro';
+import { services, camps, url } from '../lib/content';
+
+const cards = [
+  ...services.map((s) => ({ title: s.title, text: s.short, image: s.image, href: url(`/servicios#${s.id}`) })),
+  { title: camps.title, text: camps.subtitle, image: camps.image, href: url('/training-camps') },
+];
+---
+
+<div class="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-5">
+  {
+    cards.map((c, i) => (
+      <a
+        href={c.href}
+        class="group relative isolate flex aspect-[3/4] w-[78%] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-3xl border border-white/8 p-5 sm:w-auto"
+        data-reveal
+        style={`--d:${i * 80}ms`}
+      >
+        <Photo src={c.image} alt="" sizes="(min-width:1024px) 20vw, (min-width:640px) 50vw, 80vw" class="absolute inset-0 -z-10 h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
+        <h3 class="display text-2xl leading-none">{c.title}</h3>
+        <p class="mt-2 text-sm text-bone/70">{c.text}</p>
+        <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold tracking-widest text-brand uppercase">
+          Ver más <span aria-hidden="true" class="transition group-hover:translate-x-1">→</span>
+        </span>
+      </a>
+    ))
+  }
+</div>

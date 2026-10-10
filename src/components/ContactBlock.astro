@@ -1,0 +1,32 @@
+---
+import { site, whatsappUrl } from '../lib/content';
+
+const { address } = site.contact;
+const items = [
+  { label: 'WhatsApp', value: site.contact.phone, href: whatsappUrl(), external: true },
+  { label: 'Teléfono', value: site.contact.phone, href: `tel:${site.contact.phone.replace(/\s/g, '')}` },
+  { label: 'Email', value: site.contact.email, href: `mailto:${site.contact.email}` },
+  { label: 'Dónde', value: `${address.city}, ${address.region}`, href: `https://maps.google.com/?q=${encodeURIComponent(`${address.street}, ${address.zip} ${address.city}, ${address.region}`)}`, external: true },
+];
+---
+
+<ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+  {
+    items.map((it, i) => (
+      <li data-reveal style={`--d:${i * 70}ms`}>
+        <a
+          href={it.href}
+          target={it.external ? '_blank' : undefined}
+          rel={it.external ? 'noopener' : undefined}
+          class="card group flex items-center justify-between gap-4 p-5 transition hover:border-brand/60 hover:bg-ink-700"
+        >
+          <span class="min-w-0">
+            <span class="block text-xs font-bold tracking-[0.2em] text-mute uppercase">{it.label}</span>
+            <span class="mt-1 block text-lg font-semibold break-all">{it.value}</span>
+          </span>
+          <span aria-hidden="true" class="grid size-10 shrink-0 place-items-center rounded-full border border-white/15 transition group-hover:border-brand group-hover:bg-brand group-hover:text-ink">↗</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

@@ -1,0 +1,47 @@
+{
+  "intro": "Somos David y Janina, una pareja apasionada del deporte. Queremos transmitirte nuestro conocimiento y experiencia para ayudarte a alcanzar tus objetivos. Asesoramos a cada atleta de forma individual, teniendo en cuenta su vida privada y profesional, y estamos disponibles cada día ante dudas, problemas o imprevistos.",
+  "photo": "/img/fotos/david-janina",
+  "values": [
+    { "title": "Tú en el centro", "text": "Nada de planes estándar sacados de un libro. Todo se adapta a ti, a tu agenda y a tus compromisos." },
+    { "title": "Enfoque integral", "text": "Entrenamiento, nutrición y mente: los tres componentes para sacar tu máximo rendimiento." },
+    { "title": "Siempre cerca", "text": "Contacto diario por teléfono, email o WhatsApp. Si algo cambia, tu plan cambia contigo." }
+  ],
+  "members": [
+    {
+      "name": "David Morales",
+      "role": "Head Coach · Resistencia & HYROX",
+      "image": "/img/fotos/running",
+      "credentials": [
+        "Entrenador especialista en deportes de resistencia",
+        "Entrenador de triatlón",
+        "Entrenador de running",
+        "Especialista en diagnóstico de lactato",
+        "Especialista en espiroergometría",
+        "Asesor nutricional para deportistas",
+        "Entrenador de entrenamiento mental",
+        "Entrenador de resistencia Licencia A (en curso)"
+      ],
+      "bio": [
+        "Nacido y criado en Lanzarote, crecí viendo cada año el gran evento deportivo de la isla: el Ironman Lanzarote. Terminarlo una vez era el sueño de muchos chavales de aquí. Mi pasión por el running y el triatlón despertó a los 21 años, estudiando Ingeniería Química en Granada, cuando me uní a un club de triatlón. Desde entonces, no lo he dejado.",
+        "Por varios cambios de residencia por trabajo tuve que dejar el club, y hace más de una década empecé a formarme por mi cuenta para diseñar mi propio entrenamiento. Así logré mi primer gran objetivo: terminar el Ironman Lanzarote —uno de los más duros del mundo por su perfil y el viento— en menos de 12 horas, en 2015, y además como mi primer Ironman.",
+        "También he buscado siempre trabajar con entrenadores titulados, la última vez para el Campeonato del Mundo Challenge de media distancia en Samorin y el Ironman de Roth. A principios de 2021 decidí profundizar en mi formación para compartirla con otros deportistas. Hoy ese camino nos lleva al HYROX y a nuestro propio box."
+      ]
+    },
+    {
+      "name": "Janina Morales",
+      "role": "Coach · Nutrición & Fitness funcional",
+      "image": "/img/fotos/david-janina",
+      "credentials": [
+        "Nutricionista deportiva Licencia A",
+        "Grado (B.A.) en Economía del Fitness",
+        "Entrenadora de atletismo Licencia C",
+        "Instructora de clases colectivas (Indoor Cycling, BodyPump, BodyBalance y BodyCombat de Les Mills)"
+      ],
+      "bio": [
+        "Descubrí mi amor por el deporte muy pronto y pasé gran parte de mi infancia y juventud en el estadio o el pabellón. Me apasionaban muchos deportes, pero sobre todo el atletismo, que practiqué hasta empezar mi vida laboral; ya de adolescente entrenaba a un grupo de atletismo infantil.",
+        "No sorprende que profesionalmente solo me planteara «algo relacionado con el deporte». Estudié Economía del Fitness en formato dual y trabajé varios años en un gimnasio, donde disfruté especialmente de las clases colectivas y del asesoramiento nutricional.",
+        "Para nosotros deporte y nutrición van de la mano, por eso decidimos ofrecer a nuestros atletas un acompañamiento integral. Con el box, vuelvo a mis raíces: entrenamiento funcional en grupo, con energía y con método."
+      ]
+    }
+  ]
+}

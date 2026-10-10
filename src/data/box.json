@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "kicker": "Nuevo · Box propio en Lanzarote",
+    "title": "El Box",
+    "text": "Un espacio diseñado para entrenar HYROX de verdad: zona de trineos, ergómetros, estación de wall balls, sacos, kettlebells y todo lo que necesitas para preparar las 8 estaciones. Grupos reducidos y coaches que te conocen por tu nombre."
+  },
+  "location": {
+    "pendiente": true,
+    "text": "Lanzarote · Dirección exacta próximamente",
+    "mapsUrl": "https://maps.google.com/?q=Órzola,Lanzarote"
+  },
+  "equipment": [
+    "Trineos y pista de empuje/arrastre",
+    "SkiErg",
+    "Remos de aire",
+    "Bicicletas de aire",
+    "Wall balls y dianas reglamentarias",
+    "Sandbags y kettlebells",
+    "Zona de fuerza con racks y barras",
+    "Zona de movilidad y recuperación"
+  ],
+  "classes": [
+    { "id": "hyrox-class", "name": "HYROX Class", "duration": "60 min", "level": "Todos los niveles", "text": "La clase estrella: intervalos de carrera combinados con estaciones HYROX. Motor, fuerza y técnica en cada sesión." },
+    { "id": "engine", "name": "Engine", "duration": "45 min", "level": "Todos los niveles", "text": "Trabajo aeróbico en ergómetros y carrera. Construye la base que te permitirá terminar fuerte." },
+    { "id": "strength", "name": "Hybrid Strength", "duration": "60 min", "level": "Intermedio", "text": "Fuerza funcional aplicada: empuje, tracción, zancadas y agarre con el pulso alto." },
+    { "id": "simulation", "name": "Race Simulation", "duration": "90 min", "level": "Avanzado", "text": "Simulacro de carrera completa o media HYROX con cronómetro y análisis de tus tiempos por estación." },
+    { "id": "doubles", "name": "Doubles Training", "duration": "60 min", "level": "Todos los niveles", "text": "Entrena en pareja: estrategia de relevos, reparto de trabajo y ritmo compartido." }
+  ],
+  "schedule": {
+    "pendiente": true,
+    "days": [
+      { "day": "Lunes", "slots": [{ "time": "07:00", "class": "hyrox-class" }, { "time": "18:30", "class": "engine" }, { "time": "19:45", "class": "hyrox-class" }] },
+      { "day": "Martes", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hyrox-class" }, { "time": "19:45", "class": "strength" }] },
+      { "day": "Miércoles", "slots": [{ "time": "07:00", "class": "engine" }, { "time": "18:30", "class": "doubles" }, { "time": "19:45", "class": "hyrox-class" }] },
+      { "day": "Jueves", "slots": [{ "time": "07:00", "class": "hyrox-class" }, { "time": "18:30", "class": "strength" }, { "time": "19:45", "class": "engine" }] },
+      { "day": "Viernes", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hyrox-class" }] },
+      { "day": "Sábado", "slots": [{ "time": "09:30", "class": "simulation" }, { "time": "11:30", "class": "doubles" }] }
+    ]
+  },
+  "plans": [
+    {
+      "name": "Drop-in",
+      "price": null,
+      "period": "sesión",
+      "featured": false,
+      "features": ["1 clase a elegir", "Ideal si estás de paso por Lanzarote", "Reserva por WhatsApp"]
+    },
+    {
+      "name": "Box 2×",
+      "price": null,
+      "period": "mes",
+      "featured": false,
+      "features": ["2 clases por semana", "Acceso a todas las clases", "Seguimiento de tus marcas"]
+    },
+    {
+      "name": "Box Ilimitado",
+      "price": null,
+      "period": "mes",
+      "featured": true,
+      "features": ["Clases ilimitadas", "Race Simulation mensual incluida", "Test de rendimiento trimestral", "Comunidad y salidas a carreras"]
+    },
+    {
+      "name": "Race Prep 1:1",
+      "price": null,
+      "period": "mes",
+      "featured": false,
+      "features": ["Plan individual hacia tu HYROX", "Box ilimitado incluido", "Estrategia de carrera y nutrición", "Contacto diario por WhatsApp"]
+    }
+  ],
+  "plansNote": "Tarifas de apertura disponibles próximamente. Escríbenos y te las enviamos en cuanto estén."
+}

@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../lib/content';
+const { address } = site.contact;
+---
+
+<Base title="Aviso legal">
+  <article class="container-x max-w-3xl pt-36 pb-24 sm:pt-44">
+    <h1 class="display text-6xl sm:text-7xl">Aviso legal</h1>
+    <div class="mt-10 space-y-6 text-bone/80">
+      <section>
+        <h2 class="text-lg font-bold text-bone">Titular</h2>
+        <p>{site.legal.owner}<br />{address.street}<br />{address.zip} {address.city}, {address.region}<br />{address.country}</p>
+      </section>
+      <section>
+        <h2 class="text-lg font-bold text-bone">Contacto</h2>
+        <p>Teléfono: {site.contact.phone}<br />Email: <a href={`mailto:${site.contact.email}`} class="text-brand">{site.contact.email}</a></p>
+      </section>
+      <section>
+        <h2 class="text-lg font-bold text-bone">Responsable de contenidos</h2>
+        <p>{site.legal.editor}</p>
+      </section>
+    </div>
+  </article>
+</Base>

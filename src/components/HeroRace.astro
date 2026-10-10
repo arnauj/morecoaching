@@ -1,0 +1,359 @@
+---
+import { hyrox, whatsappUrl, url } from '../lib/content';
+
+// Pista tipo estadio (viewBox 400×260). Cada vuelta = 8 × (1 km + estación).
+const TRACK = 'M130 30 H270 A100 100 0 0 1 270 230 H130 A100 100 0 0 1 130 30 Z';
+const stations = hyrox.stations.map((s) => ({ n: s.n, name: s.name, distance: s.distance }));
+const headline = ['Run.', 'Work.', 'Repeat.'];
+---
+
+<section class="grain relative isolate flex min-h-dvh items-center overflow-hidden pt-24 pb-16 sm:pt-28" aria-labelledby="hero-title">
+  <!-- Fondo: brillo de marca + rejilla en movimiento -->
+  <div aria-hidden="true" class="absolute inset-0 -z-10">
+    <div class="absolute -top-1/3 -left-1/4 size-[70vmax] rounded-full bg-brand/15 blur-[120px]"></div>
+    <div class="absolute -right-1/4 -bottom-1/3 size-[60vmax] rounded-full bg-teal/20 blur-[120px]"></div>
+    <div class="hero-grid absolute inset-0 opacity-[0.07]"></div>
+  </div>
+
+  <!-- Marquee gigante -->
+  <div aria-hidden="true" class="pointer-events-none absolute bottom-0 left-0 -z-10 flex w-max animate-marquee select-none">
+    {
+      [0, 1].map(() => (
+        <span class="display text-outline px-6 text-[28vw] whitespace-nowrap text-white/[0.05] lg:text-[18vw]">
+          Hyrox · Lanzarote · More Coaching ·
+        </span>
+      ))
+    }
+  </div>
+
+  <div class="container-x grid items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-8">
+    <div>
+      <p class="kicker hero-fade" style="--d:0ms">Nuevo box HYROX · Lanzarote</p>
+
+      <h1 id="hero-title" class="display mt-6 text-[clamp(4.5rem,17vw,11rem)]">
+        {
+          headline.map((word, i) => (
+            <span class="block overflow-hidden pb-[0.04em]">
+              <span
+                class:list={['hero-word block', i === 2 && 'text-outline text-brand']}
+                style={`animation-delay:${150 + i * 140}ms`}
+              >
+                {word}
+              </span>
+            </span>
+          ))
+        }
+      </h1>
+
+      <p class="hero-fade mt-6 max-w-xl text-lg text-bone/80 sm:text-xl" style="--d:700ms">
+        Tu box de <strong class="text-bone">HYROX</strong> en Lanzarote. 8 × 1 km de carrera, 8 estaciones funcionales y un equipo de
+        coaches de resistencia que te lleva hasta la meta.
+      </p>
+
+      <div class="hero-fade mt-8 flex flex-wrap gap-3" style="--d:850ms">
+        <a href={url('/contacto')} class="btn-primary">Prueba una clase gratis</a>
+        <a href={url('/hyrox')} class="btn-ghost">¿Qué es HYROX? <span aria-hidden="true">→</span></a>
+      </div>
+
+      <a href={whatsappUrl()} target="_blank" rel="noopener" class="hero-fade mt-6 inline-block text-sm text-mute hover:text-brand" style="--d:950ms">
+        o escríbenos por WhatsApp
+      </a>
+    </div>
+
+    <!-- Animación: la carrera HYROX en bucle -->
+    <figure class="hero-fade relative" style="--d:400ms" aria-label="Animación del recorrido HYROX: 8 tramos de carrera y 8 estaciones">
+      <div class="card relative overflow-hidden p-5 backdrop-blur sm:p-7">
+        <div class="flex items-start justify-between gap-4 font-mono text-xs tracking-widest text-mute uppercase">
+          <span class="flex items-center gap-2"><span class="live-dot size-2 rounded-full bg-red-500"></span> Live race</span>
+          <span data-race="clock" class="text-bone tabular-nums">00:00:00</span>
+        </div>
+
+        <div class="mt-4 flex items-end justify-between gap-4">
+          <div class="min-w-0">
+            <p data-race="phase" class="text-xs font-bold tracking-[0.2em] text-brand uppercase">Run 1 / 8</p>
+            <p data-race="label" class="display mt-1 truncate text-4xl sm:text-5xl">1 km</p>
+          </div>
+          <p class="text-right">
+            <span data-race="km" class="display text-5xl text-brand tabular-nums sm:text-6xl">0.0</span>
+            <span class="block text-xs tracking-widest text-mute uppercase">km</span>
+          </p>
+        </div>
+
+        <svg viewBox="-55 -12 510 284" class="mt-4 w-full" role="presentation">
+          <defs>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="6" result="b" />
+              <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+            <linearGradient id="trail" x1="0" x2="1">
+              <stop offset="0" stop-color="var(--color-teal)" />
+              <stop offset="1" stop-color="var(--color-brand)" />
+            </linearGradient>
+          </defs>
+          <!-- base -->
+          <path d={TRACK} fill="none" stroke="rgba(255,255,255,.08)" stroke-width="22" />
+          <path d={TRACK} fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1" stroke-dasharray="4 8" />
+          <!-- zonas de estación (se posicionan por JS) -->
+          <g data-race="zones"></g>
+          <!-- estela -->
+          <path data-race="trail" d={TRACK} fill="none" stroke="url(#trail)" stroke-width="6" stroke-linecap="round" filter="url(#glow)" />
+          <!-- nodos -->
+          <g data-race="nodes" font-family="Anton, Impact, sans-serif" font-size="13"></g>
+          <!-- atleta -->
+          <g data-race="runner">
+            <circle r="16" fill="var(--color-brand)" opacity=".18" class="runner-pulse" />
+            <circle r="7" fill="var(--color-brand)" filter="url(#glow)" />
+            <circle r="3" fill="#fff" />
+          </g>
+          <!-- centro -->
+          <text x="200" y="122" text-anchor="middle" class="display" font-family="Anton, Impact, sans-serif" font-size="38" fill="rgba(255,255,255,.9)" letter-spacing="2">HYROX</text>
+          <text x="200" y="148" text-anchor="middle" font-size="10" fill="var(--color-mute)" letter-spacing="4" font-family="ui-monospace, monospace">8 × 1 KM + 8 STATIONS</text>
+          <text data-race="finish" x="200" y="178" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="22" fill="var(--color-brand)" opacity="0" letter-spacing="6">FINISH!</text>
+        </svg>
+
+        <ol data-race="list" class="mt-5 grid grid-cols-4 gap-1.5 text-[10px] font-semibold tracking-wider uppercase sm:text-[11px]">
+          {
+            stations.map((s) => (
+              <li class="station-chip truncate rounded-lg border border-white/8 px-2 py-1.5 text-mute transition duration-300" title={s.name}>
+                <span class="text-brand/70">{String(s.n).padStart(2, '0')}</span> {s.name}
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+      <figcaption class="sr-only">8 tramos de 1 km de carrera alternados con SkiErg, Sled Push, Sled Pull, Burpee Broad Jumps, Rowing, Farmers Carry, Sandbag Lunges y Wall Balls.</figcaption>
+    </figure>
+  </div>
+
+  <a href="#que-es-hyrox" class="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] tracking-[0.3em] text-mute uppercase hover:text-brand md:flex">
+    Scroll
+    <span class="scroll-line block h-10 w-px bg-current"></span>
+  </a>
+</section>
+
+<script type="application/json" id="race-stations" set:html={JSON.stringify(stations)} />
+
+<style>
+  .hero-word {
+    animation: rise 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .hero-fade {
+    animation: fade-up 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: var(--d, 0ms);
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+  }
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, #fff 1px, transparent 1px),
+      linear-gradient(to bottom, #fff 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    animation: grid-move 6s linear infinite;
+  }
+  @keyframes grid-move {
+    to { background-position: 64px 64px; }
+  }
+  .live-dot {
+    animation: blink 1.2s steps(2, start) infinite;
+  }
+  @keyframes blink {
+    to { visibility: hidden; }
+  }
+  .runner-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pulse 1.4s ease-out infinite;
+  }
+  @keyframes pulse {
+    from { transform: scale(0.6); opacity: 0.5; }
+    to { transform: scale(1.8); opacity: 0; }
+  }
+  .scroll-line {
+    transform-origin: top;
+    animation: scroll-line 1.8s ease-in-out infinite;
+  }
+  @keyframes scroll-line {
+    0% { transform: scaleY(0); }
+    50% { transform: scaleY(1); transform-origin: top; }
+    51% { transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+  :global(.station-chip.is-active) {
+    border-color: var(--color-brand);
+    background: color-mix(in oklab, var(--color-brand) 18%, transparent);
+    color: var(--color-bone);
+  }
+  :global(.station-chip.is-done) {
+    color: var(--color-bone);
+  }
+</style>
+
+<script>
+  type St = { n: number; name: string; distance: string };
+
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  const RUN_MS = 1700; // duración de cada tramo de 1 km
+  const ST_MS = 1500; // duración de cada estación
+  const FINISH_MS = 1800;
+  const RUN_SHARE = 0.72; // fracción de la vuelta que ocupa cada tramo de carrera
+  const RACE_RUN_S = 5 * 60; // tiempo simulado por km
+  const RACE_ST_S = 4 * 60; // tiempo simulado por estación
+  const TRAIL = 120;
+
+  const $ = <T extends Element>(k: string) => document.querySelector<T>(`[data-race="${k}"]`)!;
+  const stations: St[] = JSON.parse(document.getElementById('race-stations')!.textContent || '[]');
+  const trail = $<SVGPathElement>('trail');
+  const runner = $<SVGGElement>('runner');
+  const zones = $<SVGGElement>('zones');
+  const nodes = $<SVGGElement>('nodes');
+  const elPhase = $<HTMLElement>('phase');
+  const elLabel = $<HTMLElement>('label');
+  const elKm = $<HTMLElement>('km');
+  const elClock = $<HTMLElement>('clock');
+  const elFinish = $<SVGTextElement>('finish');
+  const chips = Array.from($<HTMLOListElement>('list').children) as HTMLElement[];
+
+  const L = trail.getTotalLength();
+  const seg = L / 8;
+  const runLen = seg * RUN_SHARE;
+  const stLen = seg - runLen;
+  const d = trail.getAttribute('d')!;
+
+  // Zonas y nodos de estación
+  stations.forEach((s, i) => {
+    const start = i * seg + runLen;
+    const z = document.createElementNS(SVG_NS, 'path');
+    z.setAttribute('d', d);
+    z.setAttribute('fill', 'none');
+    z.setAttribute('stroke', 'rgba(0,214,185,.28)');
+    z.setAttribute('stroke-width', '22');
+    z.setAttribute('stroke-dasharray', `${stLen} ${L}`);
+    z.setAttribute('stroke-dashoffset', String(-start));
+    zones.appendChild(z);
+
+    const p = trail.getPointAtLength(start + stLen / 2);
+    const cy = 130;
+    const dy = p.y - cy;
+    // en las curvas la etiqueta va al lado; en las rectas, encima/debajo
+    const anchor = p.x > 272 ? 'start' : p.x < 128 ? 'end' : 'middle';
+    const lx = p.x + (anchor === 'start' ? 16 : anchor === 'end' ? -16 : 0);
+    const ly = anchor === 'middle' ? p.y + (dy > 0 ? 27 : -19) : p.y + 3;
+    const g = document.createElementNS(SVG_NS, 'g');
+    g.setAttribute('class', 'node');
+    g.innerHTML = `
+      <circle cx="${p.x}" cy="${p.y}" r="11" fill="#0e1213" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+      <text x="${p.x}" y="${p.y + 4.5}" text-anchor="middle" fill="#eef3f2">${s.n}</text>
+      <text x="${lx}" y="${ly}" text-anchor="${anchor}" font-size="9" fill="#93a3a4" font-family="ui-monospace,monospace" letter-spacing="1">${s.name.toUpperCase()}</text>`;
+    nodes.appendChild(g);
+  });
+  const nodeEls = Array.from(nodes.children) as SVGGElement[];
+
+  trail.setAttribute('stroke-dasharray', `0 ${L}`);
+
+  const STEP = RUN_MS + ST_MS;
+  const LOOP = STEP * 8 + FINISH_MS;
+  const fmt = (s: number) =>
+    [Math.floor(s / 3600), Math.floor((s % 3600) / 60), Math.floor(s % 60)].map((n) => String(n).padStart(2, '0')).join(':');
+  const ease = (t: number) => (t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2);
+
+  let lastKey = '';
+  function render(t: number) {
+    const time = t % LOOP;
+    let pos: number, raceS: number, km: number, key: string, phase: string, label: string;
+    let idx: number;
+    let finished = false;
+
+    if (time >= STEP * 8) {
+      finished = true;
+      idx = 8;
+      pos = L - 0.01;
+      raceS = 8 * (RACE_RUN_S + RACE_ST_S);
+      km = 8;
+      key = 'finish';
+      phase = 'Finish';
+      label = '¡Meta!';
+    } else {
+      idx = Math.floor(time / STEP);
+      const local = time - idx * STEP;
+      if (local < RUN_MS) {
+        const f = local / RUN_MS;
+        pos = idx * seg + runLen * f;
+        raceS = idx * (RACE_RUN_S + RACE_ST_S) + RACE_RUN_S * f;
+        km = idx + f;
+        key = `r${idx}`;
+        phase = `Run ${idx + 1} / 8`;
+        label = '1 km';
+      } else {
+        const f = (local - RUN_MS) / ST_MS;
+        pos = idx * seg + runLen + stLen * ease(f);
+        raceS = idx * (RACE_RUN_S + RACE_ST_S) + RACE_RUN_S + RACE_ST_S * f;
+        km = idx + 1;
+        key = `s${idx}`;
+        phase = `Station ${idx + 1} / 8 · ${stations[idx].distance}`;
+        label = stations[idx].name;
+      }
+    }
+
+    const p = trail.getPointAtLength(pos);
+    runner.setAttribute('transform', `translate(${p.x} ${p.y})`);
+    const tl = Math.min(TRAIL, pos);
+    trail.setAttribute('stroke-dasharray', `${tl} ${L}`);
+    trail.setAttribute('stroke-dashoffset', String(-(pos - tl)));
+    elClock.textContent = fmt(raceS);
+    elKm.textContent = km.toFixed(1);
+
+    if (key !== lastKey) {
+      lastKey = key;
+      elPhase.textContent = phase;
+      elLabel.textContent = label;
+      const atStation = key.startsWith('s');
+      chips.forEach((c, i) => {
+        c.classList.toggle('is-active', atStation && i === idx);
+        c.classList.toggle('is-done', i < idx || finished);
+      });
+      nodeEls.forEach((n, i) => {
+        const circle = n.querySelector('circle')!;
+        const active = atStation && i === idx;
+        const done = i < idx || finished;
+        circle.setAttribute('fill', active ? '#00d6b9' : done ? '#309ba4' : '#0e1213');
+        circle.setAttribute('stroke', active || done ? '#00d6b9' : 'rgba(255,255,255,.35)');
+      });
+      elFinish.setAttribute('opacity', finished ? '1' : '0');
+    }
+  }
+
+  render(0);
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) {
+    render(STEP * 4 + RUN_MS + ST_MS / 2); // fotograma fijo en la estación 5
+  } else {
+    let raf = 0;
+    let visible = true;
+    let elapsed = 0;
+    let prev = performance.now();
+    const loop = (now: number) => {
+      // el timestamp de rAF puede ser anterior a performance.now() del play()
+      elapsed += Math.max(0, Math.min(now - prev, 64));
+      prev = now;
+      render(elapsed);
+      raf = requestAnimationFrame(loop);
+    };
+    const play = () => {
+      if (raf || !visible || document.hidden) return;
+      prev = performance.now();
+      raf = requestAnimationFrame(loop);
+    };
+    const pause = () => {
+      cancelAnimationFrame(raf);
+      raf = 0;
+    };
+    new IntersectionObserver(([e]) => {
+      visible = e.isIntersecting;
+      visible ? play() : pause();
+    }).observe(runner.ownerSVGElement!);
+    document.addEventListener('visibilitychange', () => (document.hidden ? pause() : play()));
+    play();
+  }
+</script>

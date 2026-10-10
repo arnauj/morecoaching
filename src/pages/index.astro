@@ -1,0 +1,154 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroRace from '../components/HeroRace.astro';
+import Ticker from '../components/Ticker.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import StationsGrid from '../components/StationsGrid.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import ContactBlock from '../components/ContactBlock.astro';
+import Photo from '../components/Photo.astro';
+import { box, hyrox, team, url } from '../lib/content';
+---
+
+<Base>
+  <HeroRace />
+
+  <Ticker items={hyrox.stations.map((s) => s.name)} />
+
+  <!-- Qué es HYROX -->
+  <section id="que-es-hyrox" class="container-x py-24 sm:py-32" aria-labelledby="que-es-title">
+    <div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
+      <SectionHeading id="que-es-title" kicker={hyrox.intro.kicker} title={hyrox.intro.title} highlight="HYROX" />
+      <div class="space-y-5 text-lg text-bone/75" data-reveal style="--d:120ms">
+        {hyrox.intro.text.map((p) => <p>{p}</p>)}
+        <a href={url('/hyrox')} class="btn-ghost mt-4">Todo sobre HYROX <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <dl class="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-white/8 bg-white/8 lg:grid-cols-4">
+      {
+        hyrox.stats.map((s, i) => (
+          <div class="flex flex-col bg-ink p-6 sm:p-8" data-reveal style={`--d:${i * 90}ms`}>
+            <dt class="text-sm text-mute">{s.label}</dt>
+            <dd class="display order-first text-6xl text-brand sm:text-7xl">{s.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <!-- Estaciones -->
+  <section class="container-x pb-24 sm:pb-32" aria-labelledby="estaciones-title">
+    <div class="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+      <SectionHeading id="estaciones-title" kicker="El recorrido" title="Las 8 estaciones" highlight="8" />
+      <p class="max-w-sm text-bone/60" data-reveal>Siempre en este orden. Siempre después de 1 km de carrera. Pasa el ratón (o toca) para ver nuestro consejo.</p>
+    </div>
+    <StationsGrid />
+  </section>
+
+  <!-- El box -->
+  <section class="grain relative overflow-hidden bg-brand py-24 text-ink sm:py-32" aria-labelledby="box-title">
+    <p aria-hidden="true" class="display pointer-events-none absolute -top-10 -right-10 text-[30vw] leading-none text-ink/[0.06] select-none">BOX</p>
+    <div class="container-x relative grid gap-14 lg:grid-cols-[1fr_1.2fr]">
+      <div data-reveal>
+        <p class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] uppercase before:h-px before:w-8 before:bg-ink">{box.hero.kicker}</p>
+        <h2 id="box-title" class="display mt-4 text-6xl sm:text-8xl">Nuestro box.<br />Tu pista.</h2>
+        <p class="mt-6 max-w-lg text-lg text-ink/80">{box.hero.text}</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href={url('/box')} class="btn bg-ink text-bone hover:bg-ink-700">Clases y horarios</a>
+          <a href={url('/contacto')} class="btn border border-ink/40 hover:bg-ink hover:text-bone">Reserva tu prueba</a>
+        </div>
+      </div>
+      <ul class="grid gap-3 sm:grid-cols-2">
+        {
+          box.classes.map((c, i) => (
+            <li
+              class:list={['rounded-3xl bg-ink p-6 text-bone transition duration-500 hover:-translate-y-1', i === 0 && 'sm:col-span-2']}
+              data-reveal
+              style={`--d:${i * 80}ms`}
+            >
+              <div class="flex items-baseline justify-between gap-4">
+                <h3 class="display text-3xl">{c.name}</h3>
+                <span class="font-mono text-xs text-brand">{c.duration}</span>
+              </div>
+              <p class="mt-1 text-xs tracking-widest text-mute uppercase">{c.level}</p>
+              <p class="mt-3 text-sm text-bone/70">{c.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Por qué More Coaching -->
+  <section class="container-x py-24 sm:py-32" aria-labelledby="why-title">
+    <SectionHeading id="why-title" kicker="Por qué entrenar con nosotros" title="Más motor. Más fuerza. More." highlight="More." />
+    <ol class="mt-16 divide-y divide-white/8 border-y border-white/8">
+      {
+        hyrox.whyUs.map((w, i) => (
+          <li class="group grid gap-4 py-8 sm:grid-cols-[6rem_1fr_1.4fr] sm:items-baseline sm:gap-8" data-reveal>
+            <span class="display text-outline text-5xl text-brand">{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="display text-3xl transition group-hover:translate-x-2 group-hover:text-brand">{w.title}</h3>
+            <p class="text-bone/70">{w.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <Ticker items={['Triatlón', 'Running', 'Nutrición', 'Diagnóstico', 'Training Camps']} tone="dark" reverse />
+
+  <!-- Otros servicios -->
+  <section class="container-x py-24 sm:py-32" aria-labelledby="servicios-title">
+    <div class="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+      <SectionHeading
+        id="servicios-title"
+        kicker="Nuestras raíces"
+        title="Más allá del box"
+        highlight="box"
+        text="Venimos del triatlón y el running, y seguimos acompañando a atletas de resistencia de todo el mundo, online y en Lanzarote."
+      />
+      <a href={url('/servicios')} class="btn-ghost shrink-0" data-reveal>Todos los servicios</a>
+    </div>
+    <ServiceCards />
+  </section>
+
+  <!-- Equipo -->
+  <section class="relative overflow-hidden bg-ink-800 py-24 sm:py-32" aria-labelledby="equipo-title">
+    <div class="container-x grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <div class="relative" data-reveal>
+        <div class="absolute -inset-4 -z-0 rotate-3 rounded-[2rem] border border-brand/40"></div>
+        <Photo src={team.photo} alt="David y Janina Morales, coaches de More Coaching" class="relative aspect-square w-full rounded-[2rem] object-cover" />
+        <p class="absolute -bottom-6 left-6 rounded-full bg-brand px-5 py-2 text-xs font-bold tracking-widest text-ink uppercase">David & Janina</p>
+      </div>
+      <div>
+        <SectionHeading id="equipo-title" kicker="Quiénes somos" title="Tus coaches" highlight="coaches" text={team.intro} />
+        <ul class="mt-10 space-y-5">
+          {
+            team.values.map((v, i) => (
+              <li class="flex gap-4" data-reveal style={`--d:${i * 80}ms`}>
+                <span aria-hidden="true" class="mt-2 size-2.5 shrink-0 rotate-45 bg-brand" />
+                <p><strong class="text-bone">{v.title}.</strong> <span class="text-bone/70">{v.text}</span></p>
+              </li>
+            ))
+          }
+        </ul>
+        <a href={url('/quienes-somos')} class="btn-primary mt-10" data-reveal>Conócenos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="container-x py-24 sm:py-32" aria-labelledby="contacto-title">
+    <div class="grid gap-12 lg:grid-cols-2">
+      <SectionHeading
+        id="contacto-title"
+        kicker="Contacto"
+        title="Hablemos"
+        highlight="Hablemos"
+        text="Primera clase gratis, sin compromiso. Cuéntanos tu objetivo y te proponemos el plan que mejor encaja contigo."
+      />
+      <ContactBlock />
+    </div>
+  </section>
+</Base>

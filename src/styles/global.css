@@ -1,0 +1,117 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource/anton';
+
+@theme {
+  /* Colores de marca (extraídos de morecoaching.net y del logo) */
+  --color-brand: #00d6b9;
+  --color-brand-600: #00b39b;
+  --color-teal: #309ba4;
+  --color-teal-soft: #60a8ae;
+  --color-ink: #070909;
+  --color-ink-800: #0e1213;
+  --color-ink-700: #161c1d;
+  --color-ink-600: #222a2c;
+  --color-bone: #eef3f2;
+  --color-mute: #93a3a4;
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Anton', 'Impact', ui-sans-serif, sans-serif;
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-rise: rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+
+  @keyframes marquee {
+    to { transform: translateX(-50%); }
+  }
+  @keyframes rise {
+    from { transform: translateY(110%); }
+    to { transform: translateY(0); }
+  }
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth bg-ink text-bone antialiased;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply min-h-dvh overflow-x-clip font-sans;
+  }
+  ::selection {
+    @apply bg-brand text-ink;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand;
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+@utility display {
+  @apply font-display uppercase leading-[0.9] tracking-tight;
+}
+@utility kicker {
+  @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-brand;
+  &::before {
+    content: '';
+    @apply h-px w-8 bg-brand;
+  }
+}
+@utility text-outline {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px currentColor;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wider transition duration-300;
+}
+@utility btn-primary {
+  @apply btn bg-brand text-ink hover:bg-bone hover:shadow-[0_0_40px_-5px_var(--color-brand)];
+}
+@utility btn-ghost {
+  @apply btn border border-bone/25 text-bone hover:border-brand hover:text-brand;
+}
+@utility card {
+  @apply rounded-3xl border border-white/8 bg-ink-800/80;
+}
+
+@layer components {
+  .grain {
+    position: relative;
+    isolation: isolate;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Aparición al hacer scroll (ver src/scripts/reveal.ts) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: var(--d, 0ms);
+}
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}

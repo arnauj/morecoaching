@@ -1,0 +1,13 @@
+---
+import { site, url } from '../lib/content';
+
+interface Props {
+  class?: string;
+}
+// El logo original tiene fondo blanco: se presenta sobre una placa clara para respetarlo tal cual.
+const { class: cls = '' } = Astro.props;
+---
+
+<span class:list={['inline-flex items-center rounded-2xl bg-white px-3 py-1.5 shadow-[0_8px_30px_-12px_rgba(0,214,185,0.6)]', cls]}>
+  <img src={url(site.logo)} alt={site.name} width="272" height="111" class="h-full w-auto" decoding="async" />
+</span>

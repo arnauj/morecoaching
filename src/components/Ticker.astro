@@ -1,0 +1,31 @@
+---
+interface Props {
+  items: string[];
+  tone?: 'brand' | 'dark';
+  reverse?: boolean;
+}
+const { items, tone = 'brand', reverse = false } = Astro.props;
+---
+
+<div
+  aria-hidden="true"
+  class:list={[
+    'relative overflow-hidden border-y py-4 select-none',
+    tone === 'brand' ? 'border-brand bg-brand text-ink' : 'border-white/8 bg-ink-800 text-bone',
+  ]}
+>
+  <div class:list={['flex w-max animate-marquee', reverse && '[animation-direction:reverse]']}>
+    {
+      [0, 1].map(() => (
+        <ul class="flex shrink-0 items-center">
+          {items.map((it) => (
+            <li class="display flex items-center px-6 text-2xl sm:text-3xl">
+              {it}
+              <span class="ml-12 inline-block size-2.5 rotate-45 bg-current" />
+            </li>
+          ))}
+        </ul>
+      ))
+    }
+  </div>
+</div>

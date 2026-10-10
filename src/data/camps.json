@@ -1,0 +1,36 @@
+{
+  "title": "Training Camps",
+  "subtitle": "El campus de entrenamiento diferente, individual y único",
+  "intro": "Diseñamos tu stage de entrenamiento a medida: analizamos tu entrenamiento previo y creamos el plan perfecto según tus objetivos. Semanas inolvidables en Lanzarote, con temperaturas agradables todo el año. Ahora también en versión HYROX, con sesiones en nuestro box.",
+  "image": "/img/fotos/natacion",
+  "advantages": [
+    "Fechas y duración a tu elección (según disponibilidad del alojamiento)",
+    "Diseñado específicamente para ti",
+    "Sesiones orientadas a tus objetivos y puntos débiles",
+    "Sin grupos de niveles mezclados: ni te quedas corto ni te pasas",
+    "Entrenamiento personal: todo el foco está en ti",
+    "Apartamento completo en lugar de habitación de hotel (tu familia puede venir)",
+    "Vida isleña lejos del turismo de masas",
+    "Rincones secretos y lo mejor de la isla"
+  ],
+  "included": [
+    "Planificación individual del entrenamiento",
+    "Test de lactato al inicio del campus para fijar zonas",
+    "Alojamiento en apartamento totalmente equipado (hasta 6 personas)",
+    "Traslado desde el aeropuerto",
+    "Sesiones de entrenamiento personal: salidas en bici guiadas, carrera, análisis técnico de natación y carrera — o sesiones HYROX en el box",
+    "Entrenamiento de movilidad y fuerza",
+    "Asesoramiento de nutrición y material"
+  ],
+  "prices": [
+    { "days": 7, "price": "899 €" },
+    { "days": 10, "price": "1.259 €" },
+    { "days": 14, "price": "1.699 €" }
+  ],
+  "pricesNote": "Precio por persona con todos los servicios incluidos. Otras duraciones y acompañantes, consultar.",
+  "extras": [
+    { "title": "Paquete de alimentación", "text": "Plan nutricional individual adaptado a tu entrenamiento y compra de los alimentos. Recetas fáciles y rápidas… ¡cocinas tú!", "price": "+299 € / +399 € / +549 € (7 / 10 / 14 días)" },
+    { "title": "Plan de preparación de 4 semanas", "text": "Un plan para llegar en forma al campus, con entrevista inicial y análisis de tu entrenamiento.", "price": "+99 €" },
+    { "title": "Bicicleta de alquiler", "text": "Organizamos una bici de triatlón o de carretera de alquiler, con transporte incluido, sin coste de gestión.", "price": "Consultar" }
+  ]
+}

@@ -1,0 +1,41 @@
+---
+import Photo from './Photo.astro';
+
+interface Props {
+  kicker: string;
+  title: string;
+  text?: string;
+  image?: string;
+  imageAlt?: string;
+}
+const { kicker, title, text, image, imageAlt = '' } = Astro.props;
+---
+
+<section class="grain relative isolate overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
+  {
+    image && (
+      <div aria-hidden="true" class="absolute inset-0 -z-10">
+        <Photo src={image} alt={imageAlt} eager sizes="100vw" class="h-full w-full object-cover opacity-35" />
+        <div class="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/70 to-ink" />
+      </div>
+    )
+  }
+  <div aria-hidden="true" class="absolute -top-40 -right-40 -z-10 size-[40rem] rounded-full bg-brand/15 blur-[120px]"></div>
+  <div class="container-x">
+    <p class="kicker hero-in">{kicker}</p>
+    <h1 class="display mt-5 overflow-hidden text-[clamp(3.5rem,13vw,9rem)]">
+      <span class="block animate-rise">{title}</span>
+    </h1>
+    {text && <p class="hero-in mt-6 max-w-2xl text-lg text-bone/80 sm:text-xl">{text}</p>}
+    <slot />
+  </div>
+</section>
+
+<style>
+  .hero-in {
+    animation: fade 1s 0.3s both;
+  }
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(16px); }
+  }
+</style>

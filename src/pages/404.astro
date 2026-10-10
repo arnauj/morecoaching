@@ -1,0 +1,13 @@
+---
+import { url } from '../lib/content';
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Página no encontrada">
+  <section class="container-x flex min-h-dvh flex-col items-start justify-center pt-24">
+    <p class="kicker">Error 404</p>
+    <h1 class="display mt-4 text-[clamp(4rem,18vw,12rem)]">DNF<span class="text-brand">.</span></h1>
+    <p class="mt-4 max-w-md text-lg text-bone/75">Esta página no ha llegado a meta. Vuelve a la salida y sigue entrenando.</p>
+    <a href={url('/')} class="btn-primary mt-8">Volver al inicio</a>
+  </section>
+</Base>

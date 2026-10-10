@@ -1,0 +1,21 @@
+---
+interface Props {
+  kicker?: string;
+  title: string;
+  /** Palabra(s) del título que se resaltan en color de marca */
+  highlight?: string;
+  text?: string;
+  align?: 'left' | 'center';
+  id?: string;
+}
+const { kicker, title, highlight, text, align = 'left', id } = Astro.props;
+const parts = highlight ? title.split(highlight) : [title];
+---
+
+<div class:list={['max-w-3xl', align === 'center' && 'mx-auto text-center']} data-reveal>
+  {kicker && <p class="kicker">{kicker}</p>}
+  <h2 id={id} class="display mt-4 text-5xl sm:text-6xl lg:text-7xl">
+    {parts[0]}{highlight && <span class="text-brand">{highlight}</span>}{parts[1]}
+  </h2>
+  {text && <p class="mt-6 text-lg text-bone/75">{text}</p>}
+</div>
