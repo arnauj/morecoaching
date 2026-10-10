@@ -1,16 +1,17 @@
 {
   "intro": {
-    "kicker": "Der Fitnesssport, der gerade alles erobert",
-    "title": "Was ist HYROX?",
+    "kicker": "Die Trainingsform, die gerade alles erobert",
+    "title": "Was ist Hybrid-Training?",
+    "highlight": "Hybrid",
     "text": [
-      "HYROX ist ein standardisiertes Fitnessrennen: 8 km Laufen, aufgeteilt in 8 Abschnitte à 1 km, nach jedem davon eine funktionelle Workout-Station. Immer dasselbe Format, in derselben Reihenfolge, in jeder Stadt der Welt.",
-      "Das macht es zum perfekten Wettkampf, um dich zu messen: Deine Zeit auf Lanzarote ist vergleichbar mit Madrid, Berlin oder New York. Ausdauer und Kraft in einem einzigen Rennen. Für jedes Niveau."
+      "Hybrid-Training verbindet Ausdauer und Kraft in einer Einheit: Laufabschnitte à 1 km im Wechsel mit funktionellen Workout-Stationen. Acht Laufblöcke und acht Stationen für einen aeroben Motor und Kraft, die auch bei hohem Puls halten.",
+      "Die perfekte Vorbereitung auf Hybrid-Fitnessrennen und für alle, die wirklich fit sein wollen. Ausdauer und Kraft in einem einzigen Training. Für jedes Niveau."
     ]
   },
   "stats": [
     { "value": "8", "label": "km Laufen" },
     { "value": "8", "label": "funktionelle Stationen" },
-    { "value": "1", "label": "weltweites Format" },
+    { "value": "1", "label": "Ziel: echte Fitness" },
     { "value": "60–120", "label": "Minuten im Schnitt" }
   ],
   "stations": [
@@ -23,24 +24,24 @@
     { "n": 7, "name": "Sandbag Lunges", "distance": "100 m", "focus": "Beine und Rumpf", "open": { "men": "20 kg", "women": "10 kg" }, "tip": "Das Knie berührt bei jedem Ausfallschritt den Boden. Atme bei jedem Schritt." },
     { "n": 8, "name": "Wall Balls", "distance": "100 Wdh.", "focus": "Ganzkörper", "open": { "men": "6 kg · Ziel 3 m", "women": "4 kg · Ziel 2,70 m" }, "tip": "Feste Serien von Anfang an (z. B. 10–15) und kurze Pausen." }
   ],
-  "weightsNote": "Gewichte der Open-Kategorie als Richtwerte. Prüfe immer das offizielle Regelwerk der Saison auf hyrox.com.",
+  "weightsNote": "Gewichte der Open-Kategorie als Richtwerte, wie sie bei Hybrid-Fitnesswettkämpfen üblich sind. Prüfe immer das Regelwerk des Wettkampfs, an dem du teilnimmst.",
   "divisions": [
-    { "name": "Open", "text": "Die Standardkategorie. Ideal für dein erstes HYROX." },
+    { "name": "Open", "text": "Die Standardkategorie. Ideal für dein erstes Hybrid-Rennen." },
     { "name": "Pro", "text": "Gleiche Strecke, höhere Gewichte. Für erfahrene Athleten." },
     { "name": "Doubles", "text": "Zu zweit: Ihr lauft zusammen und teilt euch die Arbeit an den Stationen." },
     { "name": "Relay", "text": "Teams aus 4: Jeder Athlet absolviert 2 km und 2 Stationen." }
   ],
   "whyUs": [
-    { "title": "Offizielles Wettkampf-Equipment", "text": "Schlitten, SkiErg, Ruderergometer, Wall Balls und Sandsäcke nach Wettkampfstandard. Du trainierst genau das, was dich am Renntag erwartet." },
+    { "title": "Wettkampf-Equipment", "text": "Schlitten, SkiErg, Ruderergometer, Wall Balls und Sandsäcke nach Wettkampfstandard. Du trainierst genau das, was dich am Renntag erwartet." },
     { "title": "Eine echte Ausdauerbasis", "text": "Wir kommen aus dem Triathlon und dem Laufsport. Wir wissen, wie man den aeroben Motor aufbaut, der auf den 8 km Laufen den Unterschied macht." },
     { "title": "Kraft, die dich nicht bremst", "text": "Funktionelles Krafttraining, das auf Leistung bei hohem Puls ausgelegt ist – nicht darauf, im Studio mehr zu heben." },
     { "title": "Simulationen und Strategie", "text": "Monatliche Race Simulations mit Zeitnahme, Analyse der Zeiten pro Station sowie Pacing- und Ernährungsstrategie für den großen Tag." }
   ],
   "faq": [
     { "q": "Brauche ich Vorerfahrung, um anzufangen?", "a": "Nein. Wir passen Gewichte und Umfang an dein Niveau an. Viele unserer Athleten fangen an, ohne je einen Sled Push gemacht zu haben." },
-    { "q": "Wie lange brauche ich, um mich auf mein erstes HYROX vorzubereiten?", "a": "Mit einer allgemeinen Fitnessbasis reichen 8 bis 16 Wochen spezifische Vorbereitung, um dein erstes Open-Rennen sicher zu bestreiten." },
+    { "q": "Wie lange brauche ich, um mich auf mein erstes Hybrid-Rennen vorzubereiten?", "a": "Mit einer allgemeinen Fitnessbasis reichen 8 bis 16 Wochen spezifische Vorbereitung, um dein erstes Open-Rennen sicher zu bestreiten." },
     { "q": "Kann ich die Box mit meinem Lauf- oder Triathlonplan kombinieren?", "a": "Ja, das ist eine unserer Spezialitäten. Wir integrieren die Box-Einheiten in deinen Ausdauerplan, damit sie sich nicht in die Quere kommen." },
-    { "q": "Organisiert ihr die Anmeldung und die Reise zu Rennen?", "a": "Wir beraten dich bei der Wahl des Rennens und der Kategorie und organisieren Gruppenfahrten zu offiziellen Events, wenn genug Athleten aus der Box dabei sind." },
+    { "q": "Organisiert ihr die Anmeldung und die Reise zu Rennen?", "a": "Wir beraten dich bei der Wahl des Rennens und der Kategorie und organisieren Gruppenfahrten zu Wettkämpfen, wenn genug Athleten aus der Box dabei sind." },
     { "q": "Kann ich ein Probetraining machen?", "a": "Klar. Die erste Probeeinheit ist kostenlos. Schreib uns per WhatsApp oder über das Kontaktformular." }
   ]
 }

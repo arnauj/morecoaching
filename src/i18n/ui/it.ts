@@ -2,15 +2,15 @@ import type { UI } from './es';
 
 const it: UI = {
   meta: {
-    homeTitle: 'HYROX Box & Coaching a Lanzarote',
+    homeTitle: 'Box di allenamento ibrido & Coaching a Lanzarote',
     description:
-      'More Coaching: il tuo box HYROX a Lanzarote. Allenamento funzionale, preparazione gara, running, triathlon e nutrizione sportiva con David e Janina.',
-    tagline: 'HYROX Box · Coaching · Lanzarote',
+      'More Coaching: il tuo box di allenamento ibrido a Lanzarote. Allenamento funzionale, preparazione gara, running, triathlon e nutrizione sportiva con David e Janina.',
+    tagline: 'Allenamento ibrido · Coaching · Lanzarote',
     skip: 'Vai al contenuto',
   },
   nav: {
     home: 'Home',
-    hyrox: 'HYROX',
+    hybrid: 'Allenamento ibrido',
     box: 'Il Box',
     services: 'Servizi',
     camps: 'Training Camp',
@@ -26,7 +26,7 @@ const it: UI = {
   footer: {
     ctaBefore: 'Pronto per la tua ',
     ctaHighlight: 'prima',
-    ctaAfter: ' HYROX?',
+    ctaAfter: ' gara ibrida?',
     book: 'Prenota la tua lezione gratuita',
     explore: 'Esplora',
     contact: 'Contatti',
@@ -36,9 +36,9 @@ const it: UI = {
     privacy: 'Privacy',
   },
   whatsapp: {
-    default: 'Ciao More Coaching, vorrei informazioni sul box HYROX.',
+    default: 'Ciao More Coaching, vorrei informazioni sul box di allenamento ibrido.',
     fab: 'Scrivici su WhatsApp',
-    plan: (name: string) => `Ciao More Coaching, mi interessa il piano "${name}" del box HYROX.`,
+    plan: (name: string) => `Ciao More Coaching, mi interessa il piano "${name}" del box di allenamento ibrido.`,
     service: (name: string) => `Ciao More Coaching, mi interessa: ${name}.`,
     camp: 'Ciao More Coaching, mi interessa un Training Camp a Lanzarote.',
   },
@@ -46,18 +46,18 @@ const it: UI = {
   stations: { station: 'STAZIONE', openMen: 'Open uomini', openWomen: 'Open donne' },
   cards: { more: 'Scopri di più' },
   hero: {
-    kicker: 'Nuovo box HYROX · Lanzarote',
-    text: 'Il tuo box <strong class="text-bone">HYROX</strong> a Lanzarote. 8 × 1 km di corsa, 8 stazioni funzionali e un team di coach di endurance che ti porta fino al traguardo.',
+    kicker: 'Nuovo box di allenamento ibrido · Lanzarote',
+    text: 'Il tuo box di <strong class="text-bone">allenamento ibrido</strong> a Lanzarote. 8 × 1 km di corsa, 8 stazioni funzionali e un team di coach di endurance che ti porta fino al traguardo.',
     cta: 'Prova una lezione gratuita',
-    what: "Cos'è HYROX?",
+    what: "Cos'è l'allenamento ibrido?",
     whatsapp: 'oppure scrivici su WhatsApp',
-    aria: 'Animazione del percorso HYROX: 8 tratti di corsa e 8 stazioni',
+    aria: 'Animazione di un allenamento ibrido: 8 tratti di corsa e 8 stazioni',
     caption:
       '8 tratti di corsa da 1 km alternati a SkiErg, Sled Push, Sled Pull, Burpee Broad Jumps, Rowing, Farmers Carry, Sandbag Lunges e Wall Balls.',
     finish: 'Traguardo!',
   },
   home: {
-    allHyrox: 'Tutto su HYROX',
+    allHybrid: "Tutto sull'allenamento ibrido",
     stationsKicker: 'Il percorso',
     stationsTitle: 'Le 8 stazioni',
     stationsHighlight: '8',
@@ -84,10 +84,11 @@ const it: UI = {
     contactTitle: 'Parliamone',
     contactText: 'Prima lezione gratuita, senza impegno. Raccontaci il tuo obiettivo e ti proponiamo il piano più adatto a te.',
   },
-  hyroxPage: {
-    title: "Cos'è HYROX",
+  hybridPage: {
+    title: "Cos'è l'allenamento ibrido",
+    heroTitle: 'Allenamento ibrido',
     description:
-      'HYROX spiegato: 8 km di corsa e 8 stazioni funzionali. Formato, pesi, categorie e come prepararti nel nostro box di Lanzarote.',
+      'Allenamento ibrido spiegato: 8 km di corsa e 8 stazioni funzionali. Formato, pesi, categorie e come prepararti nel nostro box di Lanzarote.',
     seeStations: 'Vedi le 8 stazioni',
     trainBox: 'Allenati nel box',
     formatKicker: 'Il formato',
@@ -104,8 +105,8 @@ const it: UI = {
     faqHighlight: 'iniziare',
   },
   boxPage: {
-    title: 'Il Box HYROX',
-    description: 'Il nostro box HYROX a Lanzarote: lezioni, orari, attrezzatura ufficiale e tariffe.',
+    title: 'Il Box di allenamento ibrido',
+    description: 'Il nostro box di allenamento ibrido a Lanzarote: lezioni, orari, attrezzatura da gara e tariffe.',
     classesKicker: 'Programma',
     classesTitle: 'Lezioni',
     scheduleKicker: 'Orari',
@@ -125,13 +126,13 @@ const it: UI = {
   },
   contactPage: {
     title: 'Contatti',
-    description: 'Contatta More Coaching: prima lezione gratuita nel nostro box HYROX di Lanzarote, coaching online e training camp.',
+    description: 'Contatta More Coaching: prima lezione gratuita nel nostro box di allenamento ibrido di Lanzarote, coaching online e training camp.',
     kicker: 'Contatti',
     heading: 'Parliamone',
     text: 'Prima lezione gratuita e senza impegno. Raccontaci il tuo obiettivo e ti risponderemo entro 24 h.',
     interests: [
       'Lezione di prova nel box',
-      'HYROX Race Prep 1:1',
+      'Preparazione gara ibrida 1:1',
       'Coaching di triathlon',
       'Coaching di running',
       'Nutrizione sportiva',
@@ -166,7 +167,7 @@ const it: UI = {
   campsPage: {
     title: 'Training Camp a Lanzarote',
     description:
-      'Training camp individuali a Lanzarote: triathlon, running e HYROX. Alloggio, test del lattato e allenamento personale inclusi.',
+      'Training camp individuali a Lanzarote: triathlon, running e allenamento ibrido. Alloggio, test del lattato e allenamento personale inclusi.',
     kicker: "Lanzarote · Tutto l'anno",
     photoAlt: 'Triatleta in bici sul mare a Lanzarote',
     advKicker: 'I tuoi vantaggi',
@@ -184,7 +185,7 @@ const it: UI = {
   },
   aboutPage: {
     title: 'Chi siamo',
-    description: 'David e Janina Morales: coach di endurance, nutrizione e HYROX a Lanzarote.',
+    description: 'David e Janina Morales: coach di endurance, nutrizione e allenamento ibrido a Lanzarote.',
     photoAlt: 'David e Janina Morales sulla costa di Lanzarote',
     training: 'Formazione',
   },

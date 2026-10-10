@@ -12,28 +12,28 @@ import { localeStaticPaths } from '../../i18n/config';
 
 export const getStaticPaths = localeStaticPaths;
 
-const { box, hyrox, team, t, link } = useI18n(Astro.url);
+const { box, hybrid, team, t, link } = useI18n(Astro.url);
 const h = t.home;
 ---
 
 <Base>
   <HeroRace />
 
-  <Ticker items={hyrox.stations.map((s) => s.name)} />
+  <Ticker items={hybrid.stations.map((s) => s.name)} />
 
-  <!-- Qué es HYROX -->
-  <section id="que-es-hyrox" class="container-x py-24 sm:py-32" aria-labelledby="que-es-title">
+  <!-- Qué es el entrenamiento híbrido -->
+  <section id="que-es-hibrido" class="container-x py-24 sm:py-32" aria-labelledby="que-es-title">
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
-      <SectionHeading id="que-es-title" kicker={hyrox.intro.kicker} title={hyrox.intro.title} highlight="HYROX" />
+      <SectionHeading id="que-es-title" kicker={hybrid.intro.kicker} title={hybrid.intro.title} highlight={hybrid.intro.highlight} />
       <div class="space-y-5 text-lg text-bone/75" data-reveal style="--d:120ms">
-        {hyrox.intro.text.map((p) => <p>{p}</p>)}
-        <a href={link('/hyrox')} class="btn-ghost mt-4">{h.allHyrox} <span aria-hidden="true">→</span></a>
+        {hybrid.intro.text.map((p) => <p>{p}</p>)}
+        <a href={link('/entrenamiento-hibrido')} class="btn-ghost mt-4">{h.allHybrid} <span aria-hidden="true">→</span></a>
       </div>
     </div>
 
     <dl class="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-white/8 bg-white/8 lg:grid-cols-4">
       {
-        hyrox.stats.map((s, i) => (
+        hybrid.stats.map((s, i) => (
           <div class="flex flex-col bg-ink p-6 sm:p-8" data-reveal style={`--d:${i * 90}ms`}>
             <dt class="text-sm text-mute">{s.label}</dt>
             <dd class="display order-first text-6xl text-brand sm:text-7xl">{s.value}</dd>
@@ -91,7 +91,7 @@ const h = t.home;
     <SectionHeading id="why-title" kicker={h.whyKicker} title={h.whyTitle} highlight={h.whyHighlight} />
     <ol class="mt-16 divide-y divide-white/8 border-y border-white/8">
       {
-        hyrox.whyUs.map((w, i) => (
+        hybrid.whyUs.map((w, i) => (
           <li class="group grid gap-4 py-8 sm:grid-cols-[6rem_1fr_1.4fr] sm:items-baseline sm:gap-8" data-reveal>
             <span class="display text-outline text-5xl text-brand">{String(i + 1).padStart(2, '0')}</span>
             <h3 class="display text-3xl transition group-hover:translate-x-2 group-hover:text-brand">{w.title}</h3>

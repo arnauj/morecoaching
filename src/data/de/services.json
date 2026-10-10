@@ -49,9 +49,9 @@
       "Monatliches Coaching: Wochenplan abgestimmt auf dein Training"
     ],
     "prices": [
-      { "label": "Ernährungsberatung", "price": "169 €", "period": "", "note": "129 € in Kombination mit einem Ausdauer- oder HYROX-Coaching." },
+      { "label": "Ernährungsberatung", "price": "169 €", "period": "", "note": "129 € in Kombination mit einem Ausdauer- oder Hybrid-Training-Coaching." },
       { "label": "Folgesitzung", "price": "99 €", "period": "", "note": "Analyse eines 3–5-tägigen Protokolls und neue Empfehlungen." },
-      { "label": "Ernährungscoaching", "price": "99 €", "period": "/Monat", "note": "89 €/Monat in Kombination mit einem Ausdauer- oder HYROX-Coaching." }
+      { "label": "Ernährungscoaching", "price": "99 €", "period": "/Monat", "note": "89 €/Monat in Kombination mit einem Ausdauer- oder Hybrid-Training-Coaching." }
     ]
   },
   {
