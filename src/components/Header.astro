@@ -10,7 +10,7 @@ const isActive = (href: string) => {
 };
 ---
 
-<header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 data-[scrolled=true]:bg-ink/85 data-[scrolled=true]:backdrop-blur-xl data-[scrolled=true]:shadow-[0_1px_0_rgba(255,255,255,0.06)]">
+<header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 data-[scrolled=true]:bg-ink/85 data-[scrolled=true]:backdrop-blur-xl data-[scrolled=true]:shadow-[0_1px_0_rgba(255,255,255,0.06)] data-[menu=true]:!bg-ink">
   <div class="container-x flex h-18 items-center justify-between gap-4 sm:h-20">
     <a href={url('/')} aria-label={`${site.name} — inicio`} class="shrink-0">
       <Logo class="h-12 sm:h-14" />
@@ -51,31 +51,32 @@ const isActive = (href: string) => {
       </button>
     </div>
   </div>
-
-  <div id="mobile-menu" hidden class="fixed inset-0 top-18 z-40 bg-ink/97 backdrop-blur-xl sm:top-20 lg:hidden">
-    <nav aria-label="Móvil" class="container-x flex h-full flex-col justify-between pt-6 pb-10">
-      <ul class="space-y-1">
-        {
-          [{ label: 'Inicio', href: '/' }, ...site.nav, { label: 'Contacto', href: '/contacto' }].map((item, i) => (
-            <li class="overflow-hidden">
-              <a
-                href={url(item.href)}
-                style={`--i:${i}`}
-                class="menu-link display block py-2 text-5xl text-bone transition hover:text-brand"
-              >
-                {item.label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-      <div class="space-y-2 text-sm text-mute">
-        <a href={`mailto:${site.contact.email}`} class="block hover:text-brand">{site.contact.email}</a>
-        <a href={`tel:${site.contact.phone.replace(/\s/g, '')}`} class="block hover:text-brand">{site.contact.phone}</a>
-      </div>
-    </nav>
-  </div>
 </header>
+
+<!-- Fuera del <header>: su backdrop-filter haría de bloque contenedor y el menú fixed quedaría recortado -->
+<div id="mobile-menu" hidden class="fixed inset-x-0 top-18 bottom-0 z-[45] overflow-y-auto overscroll-contain bg-ink sm:top-20 lg:hidden">
+  <nav aria-label="Móvil" class="container-x flex min-h-full flex-col justify-between gap-10 pt-6 pb-10">
+    <ul class="space-y-1">
+      {
+        [{ label: 'Inicio', href: '/' }, ...site.nav, { label: 'Contacto', href: '/contacto' }].map((item, i) => (
+          <li class="overflow-hidden">
+            <a
+              href={url(item.href)}
+              style={`--i:${i}`}
+              class="menu-link display block py-2 text-5xl text-bone transition hover:text-brand"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="space-y-2 text-sm text-mute">
+      <a href={`mailto:${site.contact.email}`} class="block hover:text-brand">{site.contact.email}</a>
+      <a href={`tel:${site.contact.phone.replace(/\s/g, '')}`} class="block hover:text-brand">{site.contact.phone}</a>
+    </div>
+  </nav>
+</div>
 
 <style>
   #mobile-menu:not([hidden]) .menu-link {
@@ -101,6 +102,7 @@ const isActive = (href: string) => {
 
   const setOpen = (open: boolean) => {
     menu.hidden = !open;
+    header.setAttribute('data-menu', String(open));
     toggle.setAttribute('aria-expanded', String(open));
     document.body.style.overflow = open ? 'hidden' : '';
     onScroll();
