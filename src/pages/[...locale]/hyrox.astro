@@ -1,10 +1,16 @@
 ---
-import Base from '../layouts/Base.astro';
-import PageHero from '../components/PageHero.astro';
-import SectionHeading from '../components/SectionHeading.astro';
-import StationsGrid from '../components/StationsGrid.astro';
-import Ticker from '../components/Ticker.astro';
-import { hyrox, url } from '../lib/content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import StationsGrid from '../../components/StationsGrid.astro';
+import Ticker from '../../components/Ticker.astro';
+import { useI18n } from '../../lib/content';
+import { localeStaticPaths } from '../../i18n/config';
+
+export const getStaticPaths = localeStaticPaths;
+
+const { hyrox, t, link } = useI18n(Astro.url);
+const h = t.hyroxPage;
 
 const faqLd = {
   '@context': 'https://schema.org',
@@ -13,11 +19,11 @@ const faqLd = {
 };
 ---
 
-<Base title="Qué es HYROX" description="HYROX explicado: 8 km de carrera y 8 estaciones funcionales. Formato, pesos, categorías y cómo prepararte en nuestro box de Lanzarote.">
+<Base title={h.title} description={h.description}>
   <PageHero kicker={hyrox.intro.kicker} title="HYROX" text={hyrox.intro.text[0]} image="/img/fotos/running">
     <div class="mt-10 flex flex-wrap gap-3">
-      <a href="#estaciones" class="btn-primary">Ver las 8 estaciones</a>
-      <a href={url('/box')} class="btn-ghost">Entrena en el box</a>
+      <a href="#estaciones" class="btn-primary">{h.seeStations}</a>
+      <a href={link('/box')} class="btn-ghost">{h.trainBox}</a>
     </div>
   </PageHero>
 
@@ -25,7 +31,7 @@ const faqLd = {
 
   <section class="container-x py-24 sm:py-32">
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
-      <SectionHeading kicker="El formato" title="Una carrera. Ocho batallas." highlight="Ocho" />
+      <SectionHeading kicker={h.formatKicker} title={h.formatTitle} highlight={h.formatHighlight} />
       <div class="space-y-5 text-lg text-bone/75" data-reveal>
         {hyrox.intro.text.map((p) => <p>{p}</p>)}
       </div>
@@ -44,14 +50,14 @@ const faqLd = {
 
   <section id="estaciones" class="container-x pb-24 sm:pb-32" aria-labelledby="st-title">
     <div class="mb-12">
-      <SectionHeading id="st-title" kicker="El recorrido" title="Estaciones y pesos" highlight="pesos" text={hyrox.weightsNote} />
+      <SectionHeading id="st-title" kicker={h.routeKicker} title={h.routeTitle} highlight={h.routeHighlight} text={hyrox.weightsNote} />
     </div>
     <StationsGrid showWeights />
   </section>
 
   <section class="bg-ink-800 py-24 sm:py-32" aria-labelledby="div-title">
     <div class="container-x">
-      <SectionHeading id="div-title" kicker="Categorías" title="Elige tu batalla" highlight="batalla" />
+      <SectionHeading id="div-title" kicker={h.divKicker} title={h.divTitle} highlight={h.divHighlight} />
       <ul class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {
           hyrox.divisions.map((d, i) => (
@@ -67,7 +73,7 @@ const faqLd = {
 
   <section class="container-x py-24 sm:py-32" aria-labelledby="faq-title">
     <div class="grid gap-12 lg:grid-cols-[1fr_1.5fr]">
-      <SectionHeading id="faq-title" kicker="Preguntas frecuentes" title="Dudas antes de empezar" highlight="empezar" />
+      <SectionHeading id="faq-title" kicker={h.faqKicker} title={h.faqTitle} highlight={h.faqHighlight} />
       <div class="divide-y divide-white/8 border-y border-white/8">
         {
           hyrox.faq.map((f) => (

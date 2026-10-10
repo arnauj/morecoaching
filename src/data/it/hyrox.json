@@ -1,0 +1,46 @@
+{
+  "intro": {
+    "kicker": "Lo sport di fitness che sta spopolando",
+    "title": "Cos'è HYROX?",
+    "text": [
+      "HYROX è una gara di fitness standardizzata: 8 km di corsa divisi in 8 tratti da 1 km, e dopo ognuno una stazione di lavoro funzionale. Sempre lo stesso formato, nello stesso ordine, in qualsiasi città del mondo.",
+      "Per questo è la competizione perfetta per misurarti: il tuo tempo a Lanzarote è paragonabile a quello di Madrid, Berlino o New York. Resistenza e forza in un'unica prova. Per tutti i livelli."
+    ]
+  },
+  "stats": [
+    { "value": "8", "label": "km di corsa" },
+    { "value": "8", "label": "stazioni funzionali" },
+    { "value": "1", "label": "formato mondiale" },
+    { "value": "60–120", "label": "minuti in media" }
+  ],
+  "stations": [
+    { "n": 1, "name": "SkiErg", "distance": "1.000 m", "focus": "Parte superiore e core", "open": { "men": "—", "women": "—" }, "tip": "Usa i fianchi, non solo le braccia. Ritmo sostenibile: mancano ancora 7 km." },
+    { "n": 2, "name": "Sled Push", "distance": "50 m", "focus": "Gambe e spinta", "open": { "men": "152 kg (slitta incl.)", "women": "102 kg (slitta incl.)" }, "tip": "Braccia tese, corpo basso, passi corti e costanti." },
+    { "n": 3, "name": "Sled Pull", "distance": "50 m", "focus": "Schiena e presa", "open": { "men": "103 kg (slitta incl.)", "women": "78 kg (slitta incl.)" }, "tip": "Cammina all'indietro e tira con tutto il corpo, non solo con le braccia." },
+    { "n": 4, "name": "Burpee Broad Jumps", "distance": "80 m", "focus": "Potenza e cardio", "open": { "men": "Corpo libero", "women": "Corpo libero" }, "tip": "Salti medi e regolari battono salti massimi con lunghe pause." },
+    { "n": 5, "name": "Rowing", "distance": "1.000 m", "focus": "Catena posteriore", "open": { "men": "—", "women": "—" }, "tip": "Gambe–busto–braccia. Controlla la frequenza di vogata." },
+    { "n": 6, "name": "Farmers Carry", "distance": "200 m", "focus": "Presa e stabilità", "open": { "men": "2 × 24 kg", "women": "2 × 16 kg" }, "tip": "Spalle indietro, passi rapidi. Mollare costa più che continuare." },
+    { "n": 7, "name": "Sandbag Lunges", "distance": "100 m", "focus": "Gambe e core", "open": { "men": "20 kg", "women": "10 kg" }, "tip": "Il ginocchio tocca terra a ogni affondo. Respira a ogni passo." },
+    { "n": 8, "name": "Wall Balls", "distance": "100 rip.", "focus": "Tutto il corpo", "open": { "men": "6 kg · bersaglio 3 m", "women": "4 kg · bersaglio 2,70 m" }, "tip": "Serie fisse fin dall'inizio (es. 10–15) e recuperi brevi." }
+  ],
+  "weightsNote": "Pesi indicativi della categoria Open. Controlla sempre il regolamento ufficiale della stagione su hyrox.com.",
+  "divisions": [
+    { "name": "Open", "text": "La categoria standard. Ideale per la tua prima HYROX." },
+    { "name": "Pro", "text": "Stesso percorso, carichi più alti. Per atleti esperti." },
+    { "name": "Doubles", "text": "In coppia: correte insieme e vi dividete il lavoro nelle stazioni." },
+    { "name": "Relay", "text": "Squadre da 4: ogni atleta fa 2 km e 2 stazioni." }
+  ],
+  "whyUs": [
+    { "title": "Attrezzatura ufficiale da gara", "text": "Slitte, SkiErg, vogatori, wall ball e sacchi secondo gli standard di gara. Ti alleni esattamente su ciò che troverai il giorno della prova." },
+    { "title": "Una vera base di resistenza", "text": "Veniamo dal triathlon e dal running. Sappiamo costruire il motore aerobico che fa la differenza negli 8 km di corsa." },
+    { "title": "Forza che non ti frena", "text": "Programmazione di forza funzionale pensata per rendere con il battito alto, non per sollevare di più in palestra." },
+    { "title": "Simulazioni e strategia", "text": "Race simulation mensili cronometrate, analisi dei tempi per stazione e strategia di ritmo e nutrizione per il giorno della gara." }
+  ],
+  "faq": [
+    { "q": "Serve esperienza per iniziare?", "a": "No. Adattiamo carichi e volume al tuo livello. Molti dei nostri atleti iniziano senza aver mai fatto uno sled push." },
+    { "q": "Quanto tempo mi serve per preparare la mia prima HYROX?", "a": "Con una base di forma fisica generale, da 8 a 16 settimane di preparazione specifica bastano per arrivare con sicurezza alla tua prima gara Open." },
+    { "q": "Posso combinare il box con il mio piano di running o triathlon?", "a": "Sì, ed è una delle nostre specialità. Integriamo le sessioni del box con il tuo piano di resistenza perché non si sovrappongano." },
+    { "q": "Organizzate l'iscrizione e il viaggio alle gare?", "a": "Ti consigliamo nella scelta della gara e della categoria, e organizziamo trasferte di gruppo alle prove ufficiali quando ci sono abbastanza atleti del box." },
+    { "q": "Posso provare una lezione?", "a": "Certo. La prima sessione di prova è gratuita. Scrivici su WhatsApp o dal modulo di contatto." }
+  ]
+}

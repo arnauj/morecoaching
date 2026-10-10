@@ -1,7 +1,5 @@
 {
   "name": "More Coaching",
-  "tagline": "HYROX Box · Coaching · Lanzarote",
-  "description": "More Coaching: tu box de HYROX en Lanzarote. Entrenamiento funcional, preparación de carrera, running, triatlón y nutrición deportiva con David y Janina.",
   "logo": "/img/logo/principal.webp",
   "contact": {
     "email": "info@morecoaching.net",
@@ -11,21 +9,25 @@
       "street": "Calle Charco de la Condesa 18",
       "city": "Órzola",
       "region": "Lanzarote",
-      "zip": "35541",
-      "country": "España"
+      "zip": "35541"
     }
   },
   "social": [
-    { "name": "Instagram", "url": "https://www.instagram.com/more.coaching/", "handle": "@more.coaching" },
-    { "name": "Facebook", "url": "https://www.facebook.com/MoreCoaching.net/", "handle": "MoreCoaching.net" },
-    { "name": "X / Twitter", "url": "https://twitter.com/MoreCoaching1", "handle": "@MoreCoaching1" }
-  ],
-  "nav": [
-    { "label": "HYROX", "href": "/hyrox" },
-    { "label": "El Box", "href": "/box" },
-    { "label": "Servicios", "href": "/servicios" },
-    { "label": "Training Camps", "href": "/training-camps" },
-    { "label": "Quiénes somos", "href": "/quienes-somos" }
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/more.coaching/",
+      "handle": "@more.coaching"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/MoreCoaching.net/",
+      "handle": "MoreCoaching.net"
+    },
+    {
+      "name": "X / Twitter",
+      "url": "https://twitter.com/MoreCoaching1",
+      "handle": "@MoreCoaching1"
+    }
   ],
   "legal": {
     "owner": "Janina Morales Acuña",

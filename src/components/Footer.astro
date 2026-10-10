@@ -1,7 +1,8 @@
 ---
 import Logo from './Logo.astro';
-import { site, whatsappUrl, url } from '../lib/content';
+import { site, navItems, whatsappUrl, useI18n } from '../lib/content';
 
+const { t, link } = useI18n(Astro.url);
 const { address } = site.contact;
 const year = new Date().getFullYear();
 ---
@@ -10,28 +11,28 @@ const year = new Date().getFullYear();
   <div class="container-x pt-20 pb-10">
     <div class="mb-16 flex flex-col items-start justify-between gap-8 border-b border-white/8 pb-16 md:flex-row md:items-end">
       <p class="display max-w-3xl text-5xl sm:text-7xl">
-        ¿Listo para tu <span class="text-brand">primera</span> HYROX?
+        {t.footer.ctaBefore}<span class="text-brand">{t.footer.ctaHighlight}</span>{t.footer.ctaAfter}
       </p>
       <div class="flex flex-wrap gap-3">
-        <a href={url('/contacto')} class="btn-primary">Reserva tu clase gratis</a>
-        <a href={whatsappUrl()} target="_blank" rel="noopener" class="btn-ghost">WhatsApp</a>
+        <a href={link('/contacto')} class="btn-primary">{t.footer.book}</a>
+        <a href={whatsappUrl(t.whatsapp.default)} target="_blank" rel="noopener" class="btn-ghost">WhatsApp</a>
       </div>
     </div>
 
     <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
       <div class="space-y-4">
         <Logo class="h-14" />
-        <p class="text-sm text-mute">{site.tagline}</p>
+        <p class="text-sm text-mute">{t.meta.tagline}</p>
       </div>
       <div>
-        <h2 class="mb-4 text-xs font-bold tracking-[0.2em] text-mute uppercase">Explora</h2>
+        <h2 class="mb-4 text-xs font-bold tracking-[0.2em] text-mute uppercase">{t.footer.explore}</h2>
         <ul class="space-y-2 text-sm">
-          {site.nav.map((l) => <li><a href={url(l.href)} class="hover:text-brand">{l.label}</a></li>)}
-          <li><a href={url('/contacto')} class="hover:text-brand">Contacto</a></li>
+          {navItems.map((l) => <li><a href={link(l.href)} class="hover:text-brand">{t.nav[l.key]}</a></li>)}
+          <li><a href={link('/contacto')} class="hover:text-brand">{t.nav.contact}</a></li>
         </ul>
       </div>
       <div>
-        <h2 class="mb-4 text-xs font-bold tracking-[0.2em] text-mute uppercase">Contacto</h2>
+        <h2 class="mb-4 text-xs font-bold tracking-[0.2em] text-mute uppercase">{t.footer.contact}</h2>
         <address class="space-y-2 text-sm not-italic">
           <a href={`mailto:${site.contact.email}`} class="block hover:text-brand">{site.contact.email}</a>
           <a href={`tel:${site.contact.phone.replace(/\s/g, '')}`} class="block hover:text-brand">{site.contact.phone}</a>
@@ -39,7 +40,7 @@ const year = new Date().getFullYear();
         </address>
       </div>
       <div>
-        <h2 class="mb-4 text-xs font-bold tracking-[0.2em] text-mute uppercase">Síguenos</h2>
+        <h2 class="mb-4 text-xs font-bold tracking-[0.2em] text-mute uppercase">{t.footer.follow}</h2>
         <ul class="space-y-2 text-sm">
           {site.social.map((s) => <li><a href={s.url} target="_blank" rel="noopener" class="hover:text-brand">{s.name}</a></li>)}
         </ul>
@@ -47,10 +48,10 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="mt-16 flex flex-col gap-4 text-xs text-mute sm:flex-row sm:justify-between">
-      <p>© {year} {site.name}. Todos los derechos reservados.</p>
+      <p>© {year} {site.name}. {t.footer.rights}</p>
       <ul class="flex gap-6">
-        <li><a href={url('/aviso-legal')} class="hover:text-brand">Aviso legal</a></li>
-        <li><a href={url('/privacidad')} class="hover:text-brand">Privacidad</a></li>
+        <li><a href={link('/aviso-legal')} class="hover:text-brand">{t.footer.legal}</a></li>
+        <li><a href={link('/privacidad')} class="hover:text-brand">{t.footer.privacy}</a></li>
       </ul>
     </div>
   </div>

@@ -1,21 +1,13 @@
-export interface Link {
-  label: string;
-  href: string;
-}
-
 export interface Site {
   name: string;
-  tagline: string;
-  description: string;
   logo: string;
   contact: {
     email: string;
     phone: string;
     whatsapp: string;
-    address: { street: string; city: string; region: string; zip: string; country: string };
+    address: { street: string; city: string; region: string; zip: string };
   };
   social: { name: string; url: string; handle: string }[];
-  nav: Link[];
   legal: { owner: string; editor: string };
 }
 

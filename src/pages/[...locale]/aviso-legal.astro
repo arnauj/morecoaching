@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site, useI18n } from '../../lib/content';
+import { localeStaticPaths } from '../../i18n/config';
+
+export const getStaticPaths = localeStaticPaths;
+const { t } = useI18n(Astro.url);
+const l = t.legalPage;
+const { address } = site.contact;
+---
+
+<Base title={l.title}>
+  <article class="container-x max-w-3xl pt-36 pb-24 sm:pt-44">
+    <h1 class="display text-6xl sm:text-7xl">{l.title}</h1>
+    <div class="mt-10 space-y-6 text-bone/80">
+      <section>
+        <h2 class="text-lg font-bold text-bone">{l.owner}</h2>
+        <p>{site.legal.owner}<br />{address.street}<br />{address.zip} {address.city}, {address.region}<br />{l.country}</p>
+      </section>
+      <section>
+        <h2 class="text-lg font-bold text-bone">{l.contact}</h2>
+        <p>{l.phone}: {site.contact.phone}<br />{l.email}: <a href={`mailto:${site.contact.email}`} class="text-brand">{site.contact.email}</a></p>
+      </section>
+      <section>
+        <h2 class="text-lg font-bold text-bone">{l.editor}</h2>
+        <p>{site.legal.editor}</p>
+      </section>
+    </div>
+  </article>
+</Base>

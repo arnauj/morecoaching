@@ -17,12 +17,19 @@ npm run preview
 
 | Ruta | Contenido |
 | --- | --- |
-| `src/data/*.json` | Todo el contenido editable (textos, precios, horarios, equipo, FAQ) |
+| `src/data/<idioma>/*.json` | Contenido editable por idioma (`es`, `en`, `de`, `it`): textos, precios, horarios, equipo, FAQ |
+| `src/data/site.json` | Datos comunes a todos los idiomas (contacto, redes, logo) |
+| `src/i18n/` | Idiomas disponibles (`config.ts`) y textos de interfaz (`ui/<idioma>.ts`) |
 | `src/types/content.ts` | Tipos TypeScript del contenido JSON |
-| `src/pages/` | Páginas (`/`, `/hyrox`, `/box`, `/servicios`, `/training-camps`, `/quienes-somos`, `/contacto`, legales) |
+| `src/pages/[...locale]/` | Páginas, generadas por idioma: español en la raíz y `/en`, `/de`, `/it` (`/`, `/hyrox`, `/box`, `/servicios`, `/training-camps`, `/quienes-somos`, `/contacto`, legales) |
 | `src/components/` | Componentes; `HeroRace.astro` es la animación de portada |
 | `src/styles/global.css` | Tokens de diseño (colores de marca, tipografías) |
 | `public/img/` | Logo (`logo/principal.webp`) y fotos |
+
+## Idiomas
+
+Español es el idioma por defecto (sin prefijo). Al cambiar un texto en `src/data/es/` o `src/i18n/ui/es.ts`,
+actualiza también las demás traducciones; `npm run check` avisa si a un idioma le falta un campo.
 
 ## Pendiente de confirmar
 

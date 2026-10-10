@@ -1,13 +1,19 @@
 ---
-import Base from '../layouts/Base.astro';
-import PageHero from '../components/PageHero.astro';
-import SectionHeading from '../components/SectionHeading.astro';
-import { box, classById, whatsappUrl } from '../lib/content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { whatsappUrl, useI18n } from '../../lib/content';
+import { localeStaticPaths } from '../../i18n/config';
+
+export const getStaticPaths = localeStaticPaths;
+
+const { box, classById, t } = useI18n(Astro.url);
+const b = t.boxPage;
 
 const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.time)))].sort();
 ---
 
-<Base title="El Box HYROX" description="Nuestro box de HYROX en Lanzarote: clases, horarios, equipamiento oficial y tarifas.">
+<Base title={b.title} description={b.description}>
   <PageHero kicker={box.hero.kicker} title={box.hero.title} text={box.hero.text}>
     <p class="mt-8 inline-flex items-center gap-3 rounded-full border border-white/15 px-5 py-2 text-sm text-bone/80">
       <span class="size-2 animate-pulse rounded-full bg-brand"></span>
@@ -17,7 +23,7 @@ const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.
 
   <!-- Clases -->
   <section class="container-x pb-24 sm:pb-32" aria-labelledby="clases-title">
-    <SectionHeading id="clases-title" kicker="Programa" title="Clases" highlight="Clases" />
+    <SectionHeading id="clases-title" kicker={b.classesKicker} title={b.classesTitle} highlight={b.classesTitle} />
     <ul class="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {
         box.classes.map((c, i) => (
@@ -39,10 +45,10 @@ const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.
     <div class="container-x">
       <SectionHeading
         id="horario-title"
-        kicker="Horario"
-        title="Encuentra tu hora"
-        highlight="hora"
-        text={box.schedule.pendiente ? 'Horario provisional de apertura: puede variar. Confírmalo con nosotros antes de venir.' : undefined}
+        kicker={b.scheduleKicker}
+        title={b.scheduleTitle}
+        highlight={b.scheduleHighlight}
+        text={box.schedule.pendiente ? b.provisional : undefined}
       />
 
       <!-- Móvil: lista por días -->
@@ -69,7 +75,7 @@ const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.
         <table class="w-full table-fixed text-sm">
           <thead class="bg-ink-700">
             <tr>
-              <th scope="col" class="w-24 p-4 text-left font-mono text-xs text-mute">Hora</th>
+              <th scope="col" class="w-24 p-4 text-left font-mono text-xs text-mute">{b.hour}</th>
               {box.schedule.days.map((d) => <th scope="col" class="display p-4 text-left text-xl">{d.day}</th>)}
             </tr>
           </thead>
@@ -99,7 +105,7 @@ const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.
   <!-- Equipamiento -->
   <section class="container-x py-24 sm:py-32" aria-labelledby="equipo-title">
     <div class="grid gap-12 lg:grid-cols-2">
-      <SectionHeading id="equipo-title" kicker="Equipamiento" title="Todo lo que pide la carrera" highlight="carrera" />
+      <SectionHeading id="equipo-title" kicker={b.equipmentKicker} title={b.equipmentTitle} highlight={b.equipmentHighlight} />
       <ul class="grid gap-3 sm:grid-cols-2">
         {
           box.equipment.map((e, i) => (
@@ -116,7 +122,7 @@ const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.
   <!-- Tarifas -->
   <section class="bg-ink-800 py-24 sm:py-32" aria-labelledby="tarifas-title">
     <div class="container-x">
-      <SectionHeading id="tarifas-title" kicker="Tarifas" title="Elige tu plan" highlight="plan" text={box.plansNote} align="center" />
+      <SectionHeading id="tarifas-title" kicker={b.plansKicker} title={b.plansTitle} highlight={b.plansHighlight} text={box.plansNote} align="center" />
       <ul class="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {
           box.plans.map((p, i) => (
@@ -128,10 +134,10 @@ const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.
               data-reveal
               style={`--d:${i * 80}ms`}
             >
-              {p.featured && <p class="mb-4 self-start rounded-full bg-ink px-3 py-1 text-[10px] font-bold tracking-widest text-brand uppercase">Recomendado</p>}
+              {p.featured && <p class="mb-4 self-start rounded-full bg-ink px-3 py-1 text-[10px] font-bold tracking-widest text-brand uppercase">{b.recommended}</p>}
               <h3 class="display text-3xl">{p.name}</h3>
               <p class="mt-4">
-                <span class="display text-5xl">{p.price ?? 'Consultar'}</span>
+                <span class="display text-5xl">{p.price ?? b.ask}</span>
                 {p.price && <span class="text-sm opacity-70"> / {p.period}</span>}
               </p>
               <ul class="mt-6 flex-1 space-y-3 text-sm">
@@ -143,12 +149,12 @@ const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.
                 ))}
               </ul>
               <a
-                href={whatsappUrl(`Hola More Coaching, me interesa el plan "${p.name}" del box HYROX.`)}
+                href={whatsappUrl(t.whatsapp.plan(p.name))}
                 target="_blank"
                 rel="noopener"
                 class:list={['btn mt-8', p.featured ? 'bg-ink text-bone hover:bg-ink-700' : 'btn-ghost']}
               >
-                Pedir información
+                {b.info}
               </a>
             </li>
           ))

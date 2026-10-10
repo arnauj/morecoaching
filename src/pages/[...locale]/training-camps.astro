@@ -1,25 +1,31 @@
 ---
-import Base from '../layouts/Base.astro';
-import PageHero from '../components/PageHero.astro';
-import SectionHeading from '../components/SectionHeading.astro';
-import Photo from '../components/Photo.astro';
-import { camps, whatsappUrl } from '../lib/content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import Photo from '../../components/Photo.astro';
+import { whatsappUrl, useI18n } from '../../lib/content';
+import { localeStaticPaths } from '../../i18n/config';
+
+export const getStaticPaths = localeStaticPaths;
+
+const { camps, t } = useI18n(Astro.url);
+const c = t.campsPage;
 ---
 
-<Base title="Training Camps en Lanzarote" description="Training camps individuales en Lanzarote: triatlón, running y HYROX. Alojamiento, test de lactato y entrenamiento personal incluidos.">
-  <PageHero kicker="Lanzarote · Todo el año" title={camps.title} text={camps.subtitle} image={camps.image} />
+<Base title={c.title} description={c.description}>
+  <PageHero kicker={c.kicker} title={camps.title} text={camps.subtitle} image={camps.image} />
 
   <section class="container-x pb-24 sm:pb-32">
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
       <p class="text-xl text-bone/80 sm:text-2xl" data-reveal>{camps.intro}</p>
-      <Photo src="/img/fotos/ironman-lanzarote" alt="Triatleta en bici junto al mar en Lanzarote" class="aspect-square w-full rounded-[2rem] object-cover" />
+      <Photo src="/img/fotos/ironman-lanzarote" alt={c.photoAlt} class="aspect-square w-full rounded-[2rem] object-cover" />
     </div>
   </section>
 
   <section class="bg-ink-800 py-24 sm:py-32">
     <div class="container-x grid gap-16 lg:grid-cols-2">
       <div>
-        <SectionHeading kicker="Tus ventajas" title="Por qué es distinto" highlight="distinto" />
+        <SectionHeading kicker={c.advKicker} title={c.advTitle} highlight={c.advHighlight} />
         <ul class="mt-10 space-y-4">
           {camps.advantages.map((a, i) => (
             <li class="flex gap-4" data-reveal style={`--d:${i * 50}ms`}>
@@ -30,7 +36,7 @@ import { camps, whatsappUrl } from '../lib/content';
         </ul>
       </div>
       <div>
-        <SectionHeading kicker="Incluido" title="Todo listo" highlight="listo" />
+        <SectionHeading kicker={c.inclKicker} title={c.inclTitle} highlight={c.inclHighlight} />
         <ul class="mt-10 space-y-4">
           {camps.included.map((a, i) => (
             <li class="flex gap-4" data-reveal style={`--d:${i * 50}ms`}>
@@ -44,18 +50,18 @@ import { camps, whatsappUrl } from '../lib/content';
   </section>
 
   <section class="container-x py-24 sm:py-32">
-    <SectionHeading kicker="Precios" title="Elige tu duración" highlight="duración" text={camps.pricesNote} align="center" />
+    <SectionHeading kicker={c.pricesKicker} title={c.pricesTitle} highlight={c.pricesHighlight} text={camps.pricesNote} align="center" />
     <ul class="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-3">
       {camps.prices.map((p, i) => (
         <li class:list={['rounded-3xl p-8 text-center', i === 1 ? 'bg-brand text-ink' : 'card']} data-reveal style={`--d:${i * 80}ms`}>
           <p class="display text-7xl">{p.days}</p>
-          <p class="text-xs font-bold tracking-[0.2em] uppercase opacity-70">días</p>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase opacity-70">{c.days}</p>
           <p class="display mt-6 text-4xl">{p.price}</p>
         </li>
       ))}
     </ul>
 
-    <h3 class="display mt-24 text-4xl" data-reveal>Extras opcionales</h3>
+    <h3 class="display mt-24 text-4xl" data-reveal>{c.extras}</h3>
     <ul class="mt-8 grid gap-4 md:grid-cols-3">
       {camps.extras.map((e) => (
         <li class="card flex flex-col p-6" data-reveal>
@@ -66,7 +72,7 @@ import { camps, whatsappUrl } from '../lib/content';
       ))}
     </ul>
     <div class="mt-14 text-center">
-      <a href={whatsappUrl('Hola More Coaching, me interesa un Training Camp en Lanzarote.')} target="_blank" rel="noopener" class="btn-primary">Consulta disponibilidad</a>
+      <a href={whatsappUrl(t.whatsapp.camp)} target="_blank" rel="noopener" class="btn-primary">{c.cta}</a>
     </div>
   </section>
 </Base>

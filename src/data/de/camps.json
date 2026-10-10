@@ -1,0 +1,36 @@
+{
+  "title": "Trainingscamps",
+  "subtitle": "Das andere Trainingscamp: individuell und einzigartig",
+  "intro": "Wir gestalten dein Trainingslager nach Maß: Wir analysieren dein bisheriges Training und erstellen den perfekten Plan für deine Ziele. Unvergessliche Wochen auf Lanzarote, mit angenehmen Temperaturen das ganze Jahr über. Jetzt auch als HYROX-Version mit Einheiten in unserer Box.",
+  "image": "/img/fotos/natacion",
+  "advantages": [
+    "Termine und Dauer nach deiner Wahl (je nach Verfügbarkeit der Unterkunft)",
+    "Speziell für dich konzipiert",
+    "Einheiten, die auf deine Ziele und Schwächen ausgerichtet sind",
+    "Keine gemischten Leistungsgruppen: weder unter- noch überfordert",
+    "Personal Training: Der volle Fokus liegt auf dir",
+    "Ganze Ferienwohnung statt Hotelzimmer (deine Familie kann mitkommen)",
+    "Inselleben abseits vom Massentourismus",
+    "Geheime Ecken und das Beste der Insel"
+  ],
+  "included": [
+    "Individuelle Trainingsplanung",
+    "Laktattest zu Beginn des Camps zur Bestimmung der Zonen",
+    "Unterkunft in einer voll ausgestatteten Ferienwohnung (bis zu 6 Personen)",
+    "Flughafentransfer",
+    "Personal-Training-Einheiten: geführte Radausfahrten, Laufen, Technikanalyse für Schwimmen und Laufen – oder HYROX-Einheiten in der Box",
+    "Mobility- und Krafttraining",
+    "Ernährungs- und Materialberatung"
+  ],
+  "prices": [
+    { "days": 7, "price": "899 €" },
+    { "days": 10, "price": "1.259 €" },
+    { "days": 14, "price": "1.699 €" }
+  ],
+  "pricesNote": "Preis pro Person inklusive aller Leistungen. Andere Zeiträume und Begleitpersonen auf Anfrage.",
+  "extras": [
+    { "title": "Ernährungspaket", "text": "Individueller Ernährungsplan, abgestimmt auf dein Training, plus Einkauf der Lebensmittel. Einfache und schnelle Rezepte … du kochst selbst!", "price": "+299 € / +399 € / +549 € (7 / 10 / 14 Tage)" },
+    { "title": "4-wöchiger Vorbereitungsplan", "text": "Ein Plan, um fit ins Camp zu starten, mit Erstgespräch und Analyse deines Trainings.", "price": "+99 €" },
+    { "title": "Mietrad", "text": "Wir organisieren ein Triathlon- oder Rennrad zur Miete, inklusive Transport, ohne Bearbeitungsgebühr.", "price": "Auf Anfrage" }
+  ]
+}

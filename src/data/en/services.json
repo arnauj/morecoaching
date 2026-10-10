@@ -1,0 +1,74 @@
+[
+  {
+    "id": "triatlon",
+    "title": "Triathlon Coaching",
+    "short": "Tailor-made weekly plans for all three disciplines, plus athletics and strength, via TrainingPeaks.",
+    "image": "/img/fotos/ciclismo",
+    "includes": [
+      "Initial interview (anamnesis) and goal setting",
+      "Annual and race planning based on your goals",
+      "Individual weekly plans for swimming, cycling and running + strength, in TrainingPeaks",
+      "Daily availability by phone, email or WhatsApp",
+      "Regular feedback meetings",
+      "Performance tests and check races (optional)",
+      "Race and nutrition strategy for your triathlon"
+    ],
+    "prices": [
+      { "label": "Monthly subscription", "price": "€119", "period": "/month", "note": "No minimum term or notice period." },
+      { "label": "6-month subscription", "price": "€109", "period": "/month", "note": "Perfect to prepare for a specific race." },
+      { "label": "12-month subscription", "price": "€99", "period": "/month", "note": "For long-term work at the best price." }
+    ],
+    "footnote": "The basic version of TrainingPeaks is free. The Premium version (optional) costs €9.90/month."
+  },
+  {
+    "id": "running",
+    "title": "Running Coaching",
+    "short": "From your first 10K to the marathon: individual training adapted to your personal and professional life.",
+    "image": "/img/fotos/running",
+    "includes": [
+      "Anamnesis and goal setting",
+      "Season and race planning",
+      "Individual weekly plan with strength and technique work",
+      "Daily availability by phone, email or WhatsApp",
+      "Performance tests and zone adjustment"
+    ],
+    "prices": [
+      { "label": "Monthly subscription", "price": "On request", "period": "", "note": "Message us and we'll prepare a proposal for you." }
+    ]
+  },
+  {
+    "id": "nutricion",
+    "title": "Sports nutrition",
+    "short": "Nutrition advice and coaching with Janina, A-licence Nutritionist.",
+    "image": "/img/fotos/david-janina",
+    "includes": [
+      "Initial interview about health and diet, and goal setting",
+      "Analysis of a 7-day food diary",
+      "Coaching session with individual recommendations and an action plan",
+      "Written summary of the key measures and recommendations",
+      "Monthly coaching: weekly plan adapted to your training"
+    ],
+    "prices": [
+      { "label": "Nutrition consultation", "price": "€169", "period": "", "note": "€129 combined with endurance or HYROX coaching." },
+      { "label": "Follow-up session", "price": "€99", "period": "", "note": "Analysis of a 3–5 day diary and new recommendations." },
+      { "label": "Nutrition coaching", "price": "€99", "period": "/month", "note": "€89/month combined with endurance or HYROX coaching." }
+    ]
+  },
+  {
+    "id": "diagnostico",
+    "title": "Performance diagnostics",
+    "short": "Analysis of your training, lactate test and spiroergometry to train with data.",
+    "image": "/img/fotos/ironman-lanzarote",
+    "includes": [
+      "Training and health analysis using your data (Strava, TrainingPeaks…)",
+      "Lactate test to define training zones",
+      "60-minute coaching session with the results",
+      "Recommendations on training, nutrition, equipment and strategy",
+      "Premium: annual plan + 4-week sample plan"
+    ],
+    "prices": [
+      { "label": "Level Up Your Training · Basic", "price": "€99", "period": "", "note": "Analysis + 60-min session." },
+      { "label": "Level Up Your Training · Premium", "price": "€199", "period": "", "note": "Basic + annual plan and 4-week plan." }
+    ]
+  }
+]

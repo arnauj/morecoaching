@@ -1,16 +1,22 @@
 ---
-import Base from '../layouts/Base.astro';
-import PageHero from '../components/PageHero.astro';
-import Photo from '../components/Photo.astro';
-import { team } from '../lib/content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Photo from '../../components/Photo.astro';
+import { useI18n } from '../../lib/content';
+import { localeStaticPaths } from '../../i18n/config';
+
+export const getStaticPaths = localeStaticPaths;
+
+const { team, t } = useI18n(Astro.url);
+const a = t.aboutPage;
 ---
 
-<Base title="Quiénes somos" description="David y Janina Morales: coaches de resistencia, nutrición y HYROX en Lanzarote.">
-  <PageHero kicker="Quiénes somos" title="David & Janina" text={team.intro} />
+<Base title={a.title} description={a.description}>
+  <PageHero kicker={a.title} title="David & Janina" text={team.intro} />
 
   <section class="container-x pb-12">
     <div class="relative" data-reveal>
-      <Photo src={team.photo} alt="David y Janina Morales en la costa de Lanzarote" sizes="100vw" class="aspect-[16/10] w-full rounded-[2rem] object-cover object-top sm:aspect-[21/9]" />
+      <Photo src={team.photo} alt={a.photoAlt} sizes="100vw" class="aspect-[16/10] w-full rounded-[2rem] object-cover object-top sm:aspect-[21/9]" />
     </div>
     <ul class="mt-12 grid gap-4 md:grid-cols-3">
       {team.values.map((v, i) => (
@@ -29,7 +35,7 @@ import { team } from '../lib/content';
           <div class:list={[i % 2 === 1 && 'lg:order-last']}>
             <div class="lg:sticky lg:top-28" data-reveal>
               <Photo src={m.image} alt={m.name} class="aspect-[4/5] w-full rounded-[2rem] object-cover" />
-              <h3 class="mt-8 text-xs font-bold tracking-[0.2em] text-mute uppercase">Formación</h3>
+              <h3 class="mt-8 text-xs font-bold tracking-[0.2em] text-mute uppercase">{a.training}</h3>
               <ul class="mt-4 flex flex-wrap gap-2">
                 {m.credentials.map((c) => (
                   <li class="rounded-full border border-white/12 px-3 py-1.5 text-xs text-bone/85">{c}</li>

@@ -1,0 +1,46 @@
+{
+  "intro": {
+    "kicker": "The fitness sport taking the world by storm",
+    "title": "What is HYROX?",
+    "text": [
+      "HYROX is a standardised fitness race: 8 km of running split into 8 legs of 1 km, each followed by a functional workout station. Always the same format, in the same order, in any city in the world.",
+      "That makes it the perfect competition to measure yourself: your time in Lanzarote is comparable with Madrid, Berlin or New York. Endurance and strength in a single race. For every level."
+    ]
+  },
+  "stats": [
+    { "value": "8", "label": "km of running" },
+    { "value": "8", "label": "functional stations" },
+    { "value": "1", "label": "worldwide format" },
+    { "value": "60–120", "label": "minutes on average" }
+  ],
+  "stations": [
+    { "n": 1, "name": "SkiErg", "distance": "1,000 m", "focus": "Upper body and core", "open": { "men": "—", "women": "—" }, "tip": "Use your hips, not just your arms. Sustainable pace: there are still 7 km to go." },
+    { "n": 2, "name": "Sled Push", "distance": "50 m", "focus": "Legs and pushing", "open": { "men": "152 kg (incl. sled)", "women": "102 kg (incl. sled)" }, "tip": "Arms extended, body low, short and steady steps." },
+    { "n": 3, "name": "Sled Pull", "distance": "50 m", "focus": "Back and grip", "open": { "men": "103 kg (incl. sled)", "women": "78 kg (incl. sled)" }, "tip": "Walk backwards and pull with your whole body, not just your arms." },
+    { "n": 4, "name": "Burpee Broad Jumps", "distance": "80 m", "focus": "Power and cardio", "open": { "men": "Bodyweight", "women": "Bodyweight" }, "tip": "Steady, medium jumps beat maximum jumps with long pauses." },
+    { "n": 5, "name": "Rowing", "distance": "1,000 m", "focus": "Posterior chain", "open": { "men": "—", "women": "—" }, "tip": "Legs–body–arms. Control your stroke rate." },
+    { "n": 6, "name": "Farmers Carry", "distance": "200 m", "focus": "Grip and stability", "open": { "men": "2 × 24 kg", "women": "2 × 16 kg" }, "tip": "Shoulders back, quick steps. Putting the weights down costs more than keeping going." },
+    { "n": 7, "name": "Sandbag Lunges", "distance": "100 m", "focus": "Legs and core", "open": { "men": "20 kg", "women": "10 kg" }, "tip": "Knee touches the ground on every lunge. Breathe with every step." },
+    { "n": 8, "name": "Wall Balls", "distance": "100 reps", "focus": "Full body", "open": { "men": "6 kg · 3 m target", "women": "4 kg · 2.70 m target" }, "tip": "Fixed sets from the start (e.g. 10–15) and short rests." }
+  ],
+  "weightsNote": "Open division weights are for guidance only. Always check the official rulebook for the season at hyrox.com.",
+  "divisions": [
+    { "name": "Open", "text": "The standard division. Ideal for your first HYROX." },
+    { "name": "Pro", "text": "Same course, heavier loads. For experienced athletes." },
+    { "name": "Doubles", "text": "In pairs: you run together and split the work at the stations." },
+    { "name": "Relay", "text": "Teams of 4: each athlete does 2 km and 2 stations." }
+  ],
+  "whyUs": [
+    { "title": "Official race equipment", "text": "Sleds, SkiErg, rowers, wall balls and sandbags to competition standards. You train exactly what you will face on race day." },
+    { "title": "A real endurance base", "text": "We come from triathlon and running. We know how to build the aerobic engine that makes the difference over the 8 km of running." },
+    { "title": "Strength that doesn't slow you down", "text": "Functional strength programming designed to perform with a high heart rate, not to lift more in a gym." },
+    { "title": "Simulations and strategy", "text": "Monthly timed race simulations, station-by-station split analysis and a pacing and nutrition strategy for race day." }
+  ],
+  "faq": [
+    { "q": "Do I need previous experience to start?", "a": "No. We adapt loads and volume to your level. Many of our athletes start without ever having done a sled push." },
+    { "q": "How long do I need to prepare for my first HYROX?", "a": "With a general fitness base, 8 to 16 weeks of specific preparation is enough to reach your first Open race with confidence." },
+    { "q": "Can I combine the box with my running or triathlon plan?", "a": "Yes, and it's one of our specialities. We integrate the box sessions with your endurance plan so they don't clash." },
+    { "q": "Do you organise race registration and travel?", "a": "We advise you on choosing the race and division, and we organise group trips to official events when there are enough athletes from the box." },
+    { "q": "Can I try a class?", "a": "Of course. The first trial session is free. Message us on WhatsApp or through the contact form." }
+  ]
+}

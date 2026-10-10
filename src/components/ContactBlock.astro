@@ -1,12 +1,13 @@
 ---
-import { site, whatsappUrl } from '../lib/content';
+import { site, whatsappUrl, useI18n } from '../lib/content';
 
+const { t } = useI18n(Astro.url);
 const { address } = site.contact;
 const items = [
-  { label: 'WhatsApp', value: site.contact.phone, href: whatsappUrl(), external: true },
-  { label: 'Teléfono', value: site.contact.phone, href: `tel:${site.contact.phone.replace(/\s/g, '')}` },
-  { label: 'Email', value: site.contact.email, href: `mailto:${site.contact.email}` },
-  { label: 'Dónde', value: `${address.city}, ${address.region}`, href: `https://maps.google.com/?q=${encodeURIComponent(`${address.street}, ${address.zip} ${address.city}, ${address.region}`)}`, external: true },
+  { label: 'WhatsApp', value: site.contact.phone, href: whatsappUrl(t.whatsapp.default), external: true },
+  { label: t.contactBlock.phone, value: site.contact.phone, href: `tel:${site.contact.phone.replace(/\s/g, '')}` },
+  { label: t.contactBlock.email, value: site.contact.email, href: `mailto:${site.contact.email}` },
+  { label: t.contactBlock.where, value: `${address.city}, ${address.region}`, href: `https://maps.google.com/?q=${encodeURIComponent(`${address.street}, ${address.zip} ${address.city}, ${address.region}`)}`, external: true },
 ];
 ---
 

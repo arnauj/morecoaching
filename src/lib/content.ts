@@ -1,23 +1,74 @@
 import type { Box, Camps, Hyrox, Service, Site, Team } from '../types/content';
+import { localize, splitPath, type Locale } from '../i18n/config';
+import es from '../i18n/ui/es';
+import en from '../i18n/ui/en';
+import de from '../i18n/ui/de';
+import it from '../i18n/ui/it';
 import siteJson from '../data/site.json';
-import hyroxJson from '../data/hyrox.json';
-import boxJson from '../data/box.json';
-import servicesJson from '../data/services.json';
-import campsJson from '../data/camps.json';
-import teamJson from '../data/team.json';
+import hyroxEs from '../data/es/hyrox.json';
+import boxEs from '../data/es/box.json';
+import servicesEs from '../data/es/services.json';
+import campsEs from '../data/es/camps.json';
+import teamEs from '../data/es/team.json';
+import hyroxEn from '../data/en/hyrox.json';
+import boxEn from '../data/en/box.json';
+import servicesEn from '../data/en/services.json';
+import campsEn from '../data/en/camps.json';
+import teamEn from '../data/en/team.json';
+import hyroxDe from '../data/de/hyrox.json';
+import boxDe from '../data/de/box.json';
+import servicesDe from '../data/de/services.json';
+import campsDe from '../data/de/camps.json';
+import teamDe from '../data/de/team.json';
+import hyroxIt from '../data/it/hyrox.json';
+import boxIt from '../data/it/box.json';
+import servicesIt from '../data/it/services.json';
+import campsIt from '../data/it/camps.json';
+import teamIt from '../data/it/team.json';
 
-// Punto único de acceso al contenido: los JSON se validan contra los tipos aquí.
+// Contenido traducible: un JSON por idioma en src/data/<idioma>/, validado contra los tipos.
+interface Content {
+  hyrox: Hyrox;
+  box: Box;
+  services: Service[];
+  camps: Camps;
+  team: Team;
+}
+const contents: Record<Locale, Content> = {
+  es: { hyrox: hyroxEs, box: boxEs, services: servicesEs, camps: campsEs, team: teamEs },
+  en: { hyrox: hyroxEn, box: boxEn, services: servicesEn, camps: campsEn, team: teamEn },
+  de: { hyrox: hyroxDe, box: boxDe, services: servicesDe, camps: campsDe, team: teamDe },
+  it: { hyrox: hyroxIt, box: boxIt, services: servicesIt, camps: campsIt, team: teamIt },
+};
+
+// Punto único de acceso al contenido común (no depende del idioma).
 export const site: Site = siteJson;
-export const hyrox: Hyrox = hyroxJson;
-export const box: Box = boxJson;
-export const services: Service[] = servicesJson;
-export const camps: Camps = campsJson;
-export const team: Team = teamJson;
 
-/** Prefija rutas internas con el `base` de Astro (p. ej. /morecoaching en GitHub Pages). */
+const ui = { es, en, de, it };
+
+/** Prefija rutas de ficheros estáticos con el `base` de Astro (p. ej. /morecoaching en GitHub Pages). */
 export const url = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, '')}${path}`;
 
-export const whatsappUrl = (text = 'Hola More Coaching, me gustaría información sobre el box HYROX.') =>
-  `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(text)}`;
+export const whatsappUrl = (text: string) => `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(text)}`;
 
-export const classById = (id: string) => box.classes.find((c) => c.id === id);
+export const navItems = [
+  { key: 'hyrox', href: '/hyrox' },
+  { key: 'box', href: '/box' },
+  { key: 'services', href: '/servicios' },
+  { key: 'camps', href: '/training-camps' },
+  { key: 'about', href: '/quienes-somos' },
+] as const;
+
+/** Idioma, textos de interfaz, contenido y enlaces de la página actual. */
+export function useI18n(pageUrl: URL) {
+  const { lang, path } = splitPath(pageUrl.pathname);
+  const content = contents[lang];
+  return {
+    lang,
+    path,
+    t: ui[lang],
+    ...content,
+    link: (p: string) => localize(lang, p),
+    classById: (id: string) => content.box.classes.find((c) => c.id === id),
+  };
+}

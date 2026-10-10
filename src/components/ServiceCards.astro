@@ -1,10 +1,12 @@
 ---
 import Photo from './Photo.astro';
-import { services, camps, url } from '../lib/content';
+import { useI18n } from '../lib/content';
+
+const { services, camps, t, link } = useI18n(Astro.url);
 
 const cards = [
-  ...services.map((s) => ({ title: s.title, text: s.short, image: s.image, href: url(`/servicios#${s.id}`) })),
-  { title: camps.title, text: camps.subtitle, image: camps.image, href: url('/training-camps') },
+  ...services.map((s) => ({ title: s.title, text: s.short, image: s.image, href: link(`/servicios#${s.id}`) })),
+  { title: camps.title, text: camps.subtitle, image: camps.image, href: link('/training-camps') },
 ];
 ---
 
@@ -22,7 +24,7 @@ const cards = [
         <h3 class="display text-2xl leading-none">{c.title}</h3>
         <p class="mt-2 text-sm text-bone/70">{c.text}</p>
         <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold tracking-widest text-brand uppercase">
-          Ver más <span aria-hidden="true" class="transition group-hover:translate-x-1">→</span>
+          {t.cards.more} <span aria-hidden="true" class="transition group-hover:translate-x-1">→</span>
         </span>
       </a>
     ))

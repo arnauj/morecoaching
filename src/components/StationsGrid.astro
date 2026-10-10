@@ -1,10 +1,11 @@
 ---
-import { hyrox } from '../lib/content';
+import { useI18n } from '../lib/content';
 
 interface Props {
   showWeights?: boolean;
 }
 const { showWeights = false } = Astro.props;
+const { hyrox, t } = useI18n(Astro.url);
 ---
 
 <ol class="grid gap-px overflow-hidden rounded-3xl border border-white/8 bg-white/8 sm:grid-cols-2 lg:grid-cols-4">
@@ -15,7 +16,7 @@ const { showWeights = false } = Astro.props;
           {s.n}
         </span>
         <div class="relative">
-          <p class="font-mono text-xs tracking-widest text-mute">1 KM RUN → ESTACIÓN {String(s.n).padStart(2, '0')}</p>
+          <p class="font-mono text-xs tracking-widest text-mute">1 KM RUN → {t.stations.station} {String(s.n).padStart(2, '0')}</p>
           <h3 class="display mt-3 text-3xl transition group-hover:text-brand">{s.name}</h3>
           <p class="mt-1 text-2xl font-bold text-brand">{s.distance}</p>
         </div>
@@ -23,8 +24,8 @@ const { showWeights = false } = Astro.props;
           <p class="text-bone/70">{s.focus}</p>
           {showWeights && s.open.men !== '—' && (
             <dl class="grid grid-cols-2 gap-2 border-t border-white/8 pt-3 text-xs">
-              <div><dt class="text-mute">Open hombres</dt><dd class="font-semibold">{s.open.men}</dd></div>
-              <div><dt class="text-mute">Open mujeres</dt><dd class="font-semibold">{s.open.women}</dd></div>
+              <div><dt class="text-mute">{t.stations.openMen}</dt><dd class="font-semibold">{s.open.men}</dd></div>
+              <div><dt class="text-mute">{t.stations.openWomen}</dt><dd class="font-semibold">{s.open.women}</dd></div>
             </dl>
           )}
           <p class="border-l-2 border-brand pl-3 text-bone/60 italic lg:max-h-0 lg:overflow-hidden lg:opacity-0 lg:transition-all lg:duration-500 lg:group-hover:max-h-40 lg:group-hover:opacity-100 lg:group-focus-within:max-h-40 lg:group-focus-within:opacity-100">
