@@ -49,9 +49,9 @@
       "Monthly coaching: weekly plan adapted to your training"
     ],
     "prices": [
-      { "label": "Nutrition consultation", "price": "€169", "period": "", "note": "€129 combined with endurance or HYROX coaching." },
+      { "label": "Nutrition consultation", "price": "€169", "period": "", "note": "€129 combined with endurance or hybrid training coaching." },
       { "label": "Follow-up session", "price": "€99", "period": "", "note": "Analysis of a 3–5 day diary and new recommendations." },
-      { "label": "Nutrition coaching", "price": "€99", "period": "/month", "note": "€89/month combined with endurance or HYROX coaching." }
+      { "label": "Nutrition coaching", "price": "€99", "period": "/month", "note": "€89/month combined with endurance or hybrid training coaching." }
     ]
   },
   {

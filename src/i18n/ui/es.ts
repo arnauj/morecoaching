@@ -1,14 +1,14 @@
 const es = {
   meta: {
-    homeTitle: 'HYROX Box & Coaching en Lanzarote',
+    homeTitle: 'Box de entrenamiento híbrido & Coaching en Lanzarote',
     description:
-      'More Coaching: tu box de HYROX en Lanzarote. Entrenamiento funcional, preparación de carrera, running, triatlón y nutrición deportiva con David y Janina.',
-    tagline: 'HYROX Box · Coaching · Lanzarote',
+      'More Coaching: tu box de entrenamiento híbrido en Lanzarote. Entrenamiento funcional, preparación de carrera, running, triatlón y nutrición deportiva con David y Janina.',
+    tagline: 'Entrenamiento híbrido · Coaching · Lanzarote',
     skip: 'Saltar al contenido',
   },
   nav: {
     home: 'Inicio',
-    hyrox: 'HYROX',
+    hybrid: 'Entrenamiento híbrido',
     box: 'El Box',
     services: 'Servicios',
     camps: 'Training Camps',
@@ -24,7 +24,7 @@ const es = {
   footer: {
     ctaBefore: '¿Listo para tu ',
     ctaHighlight: 'primera',
-    ctaAfter: ' HYROX?',
+    ctaAfter: ' carrera híbrida?',
     book: 'Reserva tu clase gratis',
     explore: 'Explora',
     contact: 'Contacto',
@@ -34,9 +34,9 @@ const es = {
     privacy: 'Privacidad',
   },
   whatsapp: {
-    default: 'Hola More Coaching, me gustaría información sobre el box HYROX.',
+    default: 'Hola More Coaching, me gustaría información sobre el box de entrenamiento híbrido.',
     fab: 'Escríbenos por WhatsApp',
-    plan: (name: string) => `Hola More Coaching, me interesa el plan "${name}" del box HYROX.`,
+    plan: (name: string) => `Hola More Coaching, me interesa el plan "${name}" del box de entrenamiento híbrido.`,
     service: (name: string) => `Hola More Coaching, me interesa: ${name}.`,
     camp: 'Hola More Coaching, me interesa un Training Camp en Lanzarote.',
   },
@@ -44,18 +44,18 @@ const es = {
   stations: { station: 'ESTACIÓN', openMen: 'Open hombres', openWomen: 'Open mujeres' },
   cards: { more: 'Ver más' },
   hero: {
-    kicker: 'Nuevo box HYROX · Lanzarote',
-    text: 'Tu box de <strong class="text-bone">HYROX</strong> en Lanzarote. 8 × 1 km de carrera, 8 estaciones funcionales y un equipo de coaches de resistencia que te lleva hasta la meta.',
+    kicker: 'Nuevo box de entrenamiento híbrido · Lanzarote',
+    text: 'Tu box de <strong class="text-bone">entrenamiento híbrido</strong> en Lanzarote. 8 × 1 km de carrera, 8 estaciones funcionales y un equipo de coaches de resistencia que te lleva hasta la meta.',
     cta: 'Prueba una clase gratis',
-    what: '¿Qué es HYROX?',
+    what: '¿Qué es el entrenamiento híbrido?',
     whatsapp: 'o escríbenos por WhatsApp',
-    aria: 'Animación del recorrido HYROX: 8 tramos de carrera y 8 estaciones',
+    aria: 'Animación de un entrenamiento híbrido: 8 tramos de carrera y 8 estaciones',
     caption:
       '8 tramos de 1 km de carrera alternados con SkiErg, Sled Push, Sled Pull, Burpee Broad Jumps, Rowing, Farmers Carry, Sandbag Lunges y Wall Balls.',
     finish: '¡Meta!',
   },
   home: {
-    allHyrox: 'Todo sobre HYROX',
+    allHybrid: 'Todo sobre el entrenamiento híbrido',
     stationsKicker: 'El recorrido',
     stationsTitle: 'Las 8 estaciones',
     stationsHighlight: '8',
@@ -82,10 +82,11 @@ const es = {
     contactTitle: 'Hablemos',
     contactText: 'Primera clase gratis, sin compromiso. Cuéntanos tu objetivo y te proponemos el plan que mejor encaja contigo.',
   },
-  hyroxPage: {
-    title: 'Qué es HYROX',
+  hybridPage: {
+    title: 'Qué es el entrenamiento híbrido',
+    heroTitle: 'Entrenamiento híbrido',
     description:
-      'HYROX explicado: 8 km de carrera y 8 estaciones funcionales. Formato, pesos, categorías y cómo prepararte en nuestro box de Lanzarote.',
+      'Entrenamiento híbrido explicado: 8 km de carrera y 8 estaciones funcionales. Formato, pesos, categorías y cómo prepararte en nuestro box de Lanzarote.',
     seeStations: 'Ver las 8 estaciones',
     trainBox: 'Entrena en el box',
     formatKicker: 'El formato',
@@ -102,8 +103,8 @@ const es = {
     faqHighlight: 'empezar',
   },
   boxPage: {
-    title: 'El Box HYROX',
-    description: 'Nuestro box de HYROX en Lanzarote: clases, horarios, equipamiento oficial y tarifas.',
+    title: 'El Box de entrenamiento híbrido',
+    description: 'Nuestro box de entrenamiento híbrido en Lanzarote: clases, horarios, equipamiento de competición y tarifas.',
     classesKicker: 'Programa',
     classesTitle: 'Clases',
     scheduleKicker: 'Horario',
@@ -123,13 +124,13 @@ const es = {
   },
   contactPage: {
     title: 'Contacto',
-    description: 'Contacta con More Coaching: primera clase gratis en nuestro box HYROX de Lanzarote, coaching online y training camps.',
+    description: 'Contacta con More Coaching: primera clase gratis en nuestro box de entrenamiento híbrido de Lanzarote, coaching online y training camps.',
     kicker: 'Contacto',
     heading: 'Hablemos',
     text: 'Primera clase gratis y sin compromiso. Cuéntanos tu objetivo y te respondemos en menos de 24 h.',
     interests: [
       'Clase de prueba en el box',
-      'HYROX Race Prep 1:1',
+      'Preparación de carrera híbrida 1:1',
       'Coaching de triatlón',
       'Coaching de running',
       'Nutrición deportiva',
@@ -164,7 +165,7 @@ const es = {
   campsPage: {
     title: 'Training Camps en Lanzarote',
     description:
-      'Training camps individuales en Lanzarote: triatlón, running y HYROX. Alojamiento, test de lactato y entrenamiento personal incluidos.',
+      'Training camps individuales en Lanzarote: triatlón, running y entrenamiento híbrido. Alojamiento, test de lactato y entrenamiento personal incluidos.',
     kicker: 'Lanzarote · Todo el año',
     photoAlt: 'Triatleta en bici junto al mar en Lanzarote',
     advKicker: 'Tus ventajas',
@@ -182,7 +183,7 @@ const es = {
   },
   aboutPage: {
     title: 'Quiénes somos',
-    description: 'David y Janina Morales: coaches de resistencia, nutrición y HYROX en Lanzarote.',
+    description: 'David y Janina Morales: coaches de resistencia, nutrición y entrenamiento híbrido en Lanzarote.',
     photoAlt: 'David y Janina Morales en la costa de Lanzarote',
     training: 'Formación',
   },

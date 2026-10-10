@@ -2,7 +2,7 @@
   "hero": {
     "kicker": "New · Our own box in Lanzarote",
     "title": "The Box",
-    "text": "A space designed for real HYROX training: sled track, ergometers, wall ball station, sandbags, kettlebells and everything you need to prepare the 8 stations. Small groups and coaches who know you by name."
+    "text": "A space designed for real hybrid training: sled track, ergometers, wall ball station, sandbags, kettlebells and everything you need to prepare the 8 stations. Small groups and coaches who know you by name."
   },
   "location": {
     "pendiente": true,
@@ -20,20 +20,20 @@
     "Mobility and recovery area"
   ],
   "classes": [
-    { "id": "hyrox-class", "name": "HYROX Class", "duration": "60 min", "level": "All levels", "text": "Our signature class: running intervals combined with HYROX stations. Engine, strength and technique in every session." },
+    { "id": "hybrid-class", "name": "Hybrid Class", "duration": "60 min", "level": "All levels", "text": "Our signature class: running intervals combined with functional stations. Engine, strength and technique in every session." },
     { "id": "engine", "name": "Engine", "duration": "45 min", "level": "All levels", "text": "Aerobic work on ergometers and running. Build the base that lets you finish strong." },
     { "id": "strength", "name": "Hybrid Strength", "duration": "60 min", "level": "Intermediate", "text": "Applied functional strength: pushing, pulling, lunges and grip with a high heart rate." },
-    { "id": "simulation", "name": "Race Simulation", "duration": "90 min", "level": "Advanced", "text": "A full or half HYROX race simulation, timed, with an analysis of your splits per station." },
+    { "id": "simulation", "name": "Race Simulation", "duration": "90 min", "level": "Advanced", "text": "A full or half hybrid race simulation, timed, with an analysis of your splits per station." },
     { "id": "doubles", "name": "Doubles Training", "duration": "60 min", "level": "All levels", "text": "Train in pairs: relay strategy, splitting the work and shared pacing." }
   ],
   "schedule": {
     "pendiente": true,
     "days": [
-      { "day": "Monday", "slots": [{ "time": "07:00", "class": "hyrox-class" }, { "time": "18:30", "class": "engine" }, { "time": "19:45", "class": "hyrox-class" }] },
-      { "day": "Tuesday", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hyrox-class" }, { "time": "19:45", "class": "strength" }] },
-      { "day": "Wednesday", "slots": [{ "time": "07:00", "class": "engine" }, { "time": "18:30", "class": "doubles" }, { "time": "19:45", "class": "hyrox-class" }] },
-      { "day": "Thursday", "slots": [{ "time": "07:00", "class": "hyrox-class" }, { "time": "18:30", "class": "strength" }, { "time": "19:45", "class": "engine" }] },
-      { "day": "Friday", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hyrox-class" }] },
+      { "day": "Monday", "slots": [{ "time": "07:00", "class": "hybrid-class" }, { "time": "18:30", "class": "engine" }, { "time": "19:45", "class": "hybrid-class" }] },
+      { "day": "Tuesday", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hybrid-class" }, { "time": "19:45", "class": "strength" }] },
+      { "day": "Wednesday", "slots": [{ "time": "07:00", "class": "engine" }, { "time": "18:30", "class": "doubles" }, { "time": "19:45", "class": "hybrid-class" }] },
+      { "day": "Thursday", "slots": [{ "time": "07:00", "class": "hybrid-class" }, { "time": "18:30", "class": "strength" }, { "time": "19:45", "class": "engine" }] },
+      { "day": "Friday", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hybrid-class" }] },
       { "day": "Saturday", "slots": [{ "time": "09:30", "class": "simulation" }, { "time": "11:30", "class": "doubles" }] }
     ]
   },
@@ -64,7 +64,7 @@
       "price": null,
       "period": "month",
       "featured": false,
-      "features": ["Individual plan towards your HYROX", "Unlimited box included", "Race and nutrition strategy", "Daily contact via WhatsApp"]
+      "features": ["Individual plan towards your hybrid race", "Unlimited box included", "Race and nutrition strategy", "Daily contact via WhatsApp"]
     }
   ],
   "plansNote": "Opening prices available soon. Message us and we'll send them as soon as they're ready."

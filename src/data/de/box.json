@@ -2,7 +2,7 @@
   "hero": {
     "kicker": "Neu · Eigene Box auf Lanzarote",
     "title": "Die Box",
-    "text": "Ein Raum, gemacht für echtes HYROX-Training: Schlittenbahn, Ergometer, Wall-Ball-Station, Sandsäcke, Kettlebells und alles, was du für die 8 Stationen brauchst. Kleine Gruppen und Coaches, die dich beim Namen kennen."
+    "text": "Ein Raum, gemacht für echtes Hybrid-Training: Schlittenbahn, Ergometer, Wall-Ball-Station, Sandsäcke, Kettlebells und alles, was du für die 8 Stationen brauchst. Kleine Gruppen und Coaches, die dich beim Namen kennen."
   },
   "location": {
     "pendiente": true,
@@ -20,20 +20,20 @@
     "Mobility- und Regenerationsbereich"
   ],
   "classes": [
-    { "id": "hyrox-class", "name": "HYROX Class", "duration": "60 min", "level": "Alle Niveaus", "text": "Unser Top-Kurs: Laufintervalle kombiniert mit HYROX-Stationen. Motor, Kraft und Technik in jeder Einheit." },
+    { "id": "hybrid-class", "name": "Hybrid Class", "duration": "60 min", "level": "Alle Niveaus", "text": "Unser Top-Kurs: Laufintervalle kombiniert mit funktionellen Stationen. Motor, Kraft und Technik in jeder Einheit." },
     { "id": "engine", "name": "Engine", "duration": "45 min", "level": "Alle Niveaus", "text": "Aerobes Training auf Ergometern und beim Laufen. Baue die Basis auf, mit der du stark ins Ziel kommst." },
     { "id": "strength", "name": "Hybrid Strength", "duration": "60 min", "level": "Mittelstufe", "text": "Angewandte funktionelle Kraft: Drücken, Ziehen, Ausfallschritte und Griffkraft bei hohem Puls." },
-    { "id": "simulation", "name": "Race Simulation", "duration": "90 min", "level": "Fortgeschritten", "text": "Simulation eines ganzen oder halben HYROX-Rennens mit Zeitnahme und Analyse deiner Zeiten pro Station." },
+    { "id": "simulation", "name": "Race Simulation", "duration": "90 min", "level": "Fortgeschritten", "text": "Simulation eines ganzen oder halben Hybrid-Rennens mit Zeitnahme und Analyse deiner Zeiten pro Station." },
     { "id": "doubles", "name": "Doubles Training", "duration": "60 min", "level": "Alle Niveaus", "text": "Training zu zweit: Wechselstrategie, Arbeitsaufteilung und gemeinsames Tempo." }
   ],
   "schedule": {
     "pendiente": true,
     "days": [
-      { "day": "Montag", "slots": [{ "time": "07:00", "class": "hyrox-class" }, { "time": "18:30", "class": "engine" }, { "time": "19:45", "class": "hyrox-class" }] },
-      { "day": "Dienstag", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hyrox-class" }, { "time": "19:45", "class": "strength" }] },
-      { "day": "Mittwoch", "slots": [{ "time": "07:00", "class": "engine" }, { "time": "18:30", "class": "doubles" }, { "time": "19:45", "class": "hyrox-class" }] },
-      { "day": "Donnerstag", "slots": [{ "time": "07:00", "class": "hyrox-class" }, { "time": "18:30", "class": "strength" }, { "time": "19:45", "class": "engine" }] },
-      { "day": "Freitag", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hyrox-class" }] },
+      { "day": "Montag", "slots": [{ "time": "07:00", "class": "hybrid-class" }, { "time": "18:30", "class": "engine" }, { "time": "19:45", "class": "hybrid-class" }] },
+      { "day": "Dienstag", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hybrid-class" }, { "time": "19:45", "class": "strength" }] },
+      { "day": "Mittwoch", "slots": [{ "time": "07:00", "class": "engine" }, { "time": "18:30", "class": "doubles" }, { "time": "19:45", "class": "hybrid-class" }] },
+      { "day": "Donnerstag", "slots": [{ "time": "07:00", "class": "hybrid-class" }, { "time": "18:30", "class": "strength" }, { "time": "19:45", "class": "engine" }] },
+      { "day": "Freitag", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hybrid-class" }] },
       { "day": "Samstag", "slots": [{ "time": "09:30", "class": "simulation" }, { "time": "11:30", "class": "doubles" }] }
     ]
   },
@@ -64,7 +64,7 @@
       "price": null,
       "period": "Monat",
       "featured": false,
-      "features": ["Individueller Plan für dein HYROX", "Box Unlimited inklusive", "Renn- und Ernährungsstrategie", "Täglicher Kontakt per WhatsApp"]
+      "features": ["Individueller Plan für dein Hybrid-Rennen", "Box Unlimited inklusive", "Renn- und Ernährungsstrategie", "Täglicher Kontakt per WhatsApp"]
     }
   ],
   "plansNote": "Die Eröffnungspreise folgen in Kürze. Schreib uns und wir schicken sie dir, sobald sie feststehen."

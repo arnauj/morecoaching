@@ -1,16 +1,17 @@
 {
   "intro": {
-    "kicker": "Lo sport di fitness che sta spopolando",
-    "title": "Cos'è HYROX?",
+    "kicker": "Il modo di allenarsi che sta spopolando",
+    "title": "Cos'è l'allenamento ibrido?",
+    "highlight": "ibrido",
     "text": [
-      "HYROX è una gara di fitness standardizzata: 8 km di corsa divisi in 8 tratti da 1 km, e dopo ognuno una stazione di lavoro funzionale. Sempre lo stesso formato, nello stesso ordine, in qualsiasi città del mondo.",
-      "Per questo è la competizione perfetta per misurarti: il tuo tempo a Lanzarote è paragonabile a quello di Madrid, Berlino o New York. Resistenza e forza in un'unica prova. Per tutti i livelli."
+      "L'allenamento ibrido combina resistenza e forza nella stessa sessione: tratti di corsa da 1 km alternati a stazioni di lavoro funzionale. Otto blocchi di corsa e otto stazioni per costruire un motore aerobico e una forza che reggono anche a battito alto.",
+      "È la preparazione perfetta per le gare di fitness ibrido e per chiunque voglia essere davvero in forma. Resistenza e forza in un unico allenamento. Per tutti i livelli."
     ]
   },
   "stats": [
     { "value": "8", "label": "km di corsa" },
     { "value": "8", "label": "stazioni funzionali" },
-    { "value": "1", "label": "formato mondiale" },
+    { "value": "1", "label": "obiettivo: essere in forma" },
     { "value": "60–120", "label": "minuti in media" }
   ],
   "stations": [
@@ -23,24 +24,24 @@
     { "n": 7, "name": "Sandbag Lunges", "distance": "100 m", "focus": "Gambe e core", "open": { "men": "20 kg", "women": "10 kg" }, "tip": "Il ginocchio tocca terra a ogni affondo. Respira a ogni passo." },
     { "n": 8, "name": "Wall Balls", "distance": "100 rip.", "focus": "Tutto il corpo", "open": { "men": "6 kg · bersaglio 3 m", "women": "4 kg · bersaglio 2,70 m" }, "tip": "Serie fisse fin dall'inizio (es. 10–15) e recuperi brevi." }
   ],
-  "weightsNote": "Pesi indicativi della categoria Open. Controlla sempre il regolamento ufficiale della stagione su hyrox.com.",
+  "weightsNote": "Pesi indicativi della categoria Open, comuni nelle competizioni di fitness ibrido. Controlla sempre il regolamento della gara a cui partecipi.",
   "divisions": [
-    { "name": "Open", "text": "La categoria standard. Ideale per la tua prima HYROX." },
+    { "name": "Open", "text": "La categoria standard. Ideale per la tua prima gara ibrida." },
     { "name": "Pro", "text": "Stesso percorso, carichi più alti. Per atleti esperti." },
     { "name": "Doubles", "text": "In coppia: correte insieme e vi dividete il lavoro nelle stazioni." },
     { "name": "Relay", "text": "Squadre da 4: ogni atleta fa 2 km e 2 stazioni." }
   ],
   "whyUs": [
-    { "title": "Attrezzatura ufficiale da gara", "text": "Slitte, SkiErg, vogatori, wall ball e sacchi secondo gli standard di gara. Ti alleni esattamente su ciò che troverai il giorno della prova." },
+    { "title": "Attrezzatura da gara", "text": "Slitte, SkiErg, vogatori, wall ball e sacchi secondo gli standard di gara. Ti alleni esattamente su ciò che troverai il giorno della prova." },
     { "title": "Una vera base di resistenza", "text": "Veniamo dal triathlon e dal running. Sappiamo costruire il motore aerobico che fa la differenza negli 8 km di corsa." },
     { "title": "Forza che non ti frena", "text": "Programmazione di forza funzionale pensata per rendere con il battito alto, non per sollevare di più in palestra." },
     { "title": "Simulazioni e strategia", "text": "Race simulation mensili cronometrate, analisi dei tempi per stazione e strategia di ritmo e nutrizione per il giorno della gara." }
   ],
   "faq": [
     { "q": "Serve esperienza per iniziare?", "a": "No. Adattiamo carichi e volume al tuo livello. Molti dei nostri atleti iniziano senza aver mai fatto uno sled push." },
-    { "q": "Quanto tempo mi serve per preparare la mia prima HYROX?", "a": "Con una base di forma fisica generale, da 8 a 16 settimane di preparazione specifica bastano per arrivare con sicurezza alla tua prima gara Open." },
+    { "q": "Quanto tempo mi serve per preparare la mia prima gara ibrida?", "a": "Con una base di forma fisica generale, da 8 a 16 settimane di preparazione specifica bastano per arrivare con sicurezza alla tua prima gara Open." },
     { "q": "Posso combinare il box con il mio piano di running o triathlon?", "a": "Sì, ed è una delle nostre specialità. Integriamo le sessioni del box con il tuo piano di resistenza perché non si sovrappongano." },
-    { "q": "Organizzate l'iscrizione e il viaggio alle gare?", "a": "Ti consigliamo nella scelta della gara e della categoria, e organizziamo trasferte di gruppo alle prove ufficiali quando ci sono abbastanza atleti del box." },
+    { "q": "Organizzate l'iscrizione e il viaggio alle gare?", "a": "Ti consigliamo nella scelta della gara e della categoria, e organizziamo trasferte di gruppo alle gare quando ci sono abbastanza atleti del box." },
     { "q": "Posso provare una lezione?", "a": "Certo. La prima sessione di prova è gratuita. Scrivici su WhatsApp o dal modulo di contatto." }
   ]
 }

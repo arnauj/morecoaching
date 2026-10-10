@@ -20,8 +20,8 @@ export interface Station {
   tip: string;
 }
 
-export interface Hyrox {
-  intro: { kicker: string; title: string; text: string[] };
+export interface Hybrid {
+  intro: { kicker: string; title: string; highlight: string; text: string[] };
   stats: { value: string; label: string }[];
   stations: Station[];
   weightsNote: string;

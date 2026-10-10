@@ -49,9 +49,9 @@
       "Coaching mensual: plan semanal adaptado a tu entrenamiento"
     ],
     "prices": [
-      { "label": "Asesoramiento nutricional", "price": "169 €", "period": "", "note": "129 € combinado con un coaching de resistencia o HYROX." },
+      { "label": "Asesoramiento nutricional", "price": "169 €", "period": "", "note": "129 € combinado con un coaching de resistencia o entrenamiento híbrido." },
       { "label": "Sesión de seguimiento", "price": "99 €", "period": "", "note": "Análisis de un registro de 3–5 días y nuevas recomendaciones." },
-      { "label": "Coaching nutricional", "price": "99 €", "period": "/mes", "note": "89 €/mes combinado con un coaching de resistencia o HYROX." }
+      { "label": "Coaching nutricional", "price": "99 €", "period": "/mes", "note": "89 €/mes combinado con un coaching de resistencia o entrenamiento híbrido." }
     ]
   },
   {

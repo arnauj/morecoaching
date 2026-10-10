@@ -49,9 +49,9 @@
       "Coaching mensile: piano settimanale adattato al tuo allenamento"
     ],
     "prices": [
-      { "label": "Consulenza nutrizionale", "price": "169 €", "period": "", "note": "129 € abbinata a un coaching di endurance o HYROX." },
+      { "label": "Consulenza nutrizionale", "price": "169 €", "period": "", "note": "129 € abbinata a un coaching di endurance o allenamento ibrido." },
       { "label": "Sessione di follow-up", "price": "99 €", "period": "", "note": "Analisi di un diario di 3–5 giorni e nuove raccomandazioni." },
-      { "label": "Coaching nutrizionale", "price": "99 €", "period": "/mese", "note": "89 €/mese abbinato a un coaching di endurance o HYROX." }
+      { "label": "Coaching nutrizionale", "price": "99 €", "period": "/mese", "note": "89 €/mese abbinato a un coaching di endurance o allenamento ibrido." }
     ]
   },
   {
