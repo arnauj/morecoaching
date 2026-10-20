@@ -1,9 +1,10 @@
 {
   "title": "Trainingscamps",
-  "subtitle": "Das andere Trainingscamp: individuell und einzigartig",
+  "subtitle": "Das andere Trainingscamp: einzigartig, als Einzel- oder Doppelcamp",
   "intro": "Wir gestalten dein Trainingslager nach Maß: Wir analysieren dein bisheriges Training und erstellen den perfekten Plan für deine Ziele. Unvergessliche Wochen auf Lanzarote, mit angenehmen Temperaturen das ganze Jahr über. Jetzt auch als Hybrid-Training-Version mit Einheiten in unserer Box.",
-  "image": "/img/fotos/natacion",
+  "image": "/img/fotos/david-janina",
   "advantages": [
+    "Einzel- oder Doppelcamp: komm allein oder mit deinem Trainingspartner",
     "Termine und Dauer nach deiner Wahl (je nach Verfügbarkeit der Unterkunft)",
     "Speziell für dich konzipiert",
     "Einheiten, die auf deine Ziele und Schwächen ausgerichtet sind",
@@ -15,10 +16,9 @@
   ],
   "included": [
     "Individuelle Trainingsplanung",
-    "Laktattest zu Beginn des Camps zur Bestimmung der Zonen",
     "Unterkunft in einer voll ausgestatteten Ferienwohnung (bis zu 6 Personen)",
     "Flughafentransfer",
-    "Personal-Training-Einheiten: geführte Radausfahrten, Laufen, Technikanalyse für Schwimmen und Laufen – oder Hybrid-Training-Einheiten in der Box",
+    "Personal-Training-Einheiten: Laufen und Lauftechnikanalyse – oder Hybrid-Training-Einheiten in der Box",
     "Mobility- und Krafttraining",
     "Ernährungs- und Materialberatung"
   ],
@@ -29,8 +29,6 @@
   ],
   "pricesNote": "Preis pro Person inklusive aller Leistungen. Andere Zeiträume und Begleitpersonen auf Anfrage.",
   "extras": [
-    { "title": "Ernährungspaket", "text": "Individueller Ernährungsplan, abgestimmt auf dein Training, plus Einkauf der Lebensmittel. Einfache und schnelle Rezepte … du kochst selbst!", "price": "+299 € / +399 € / +549 € (7 / 10 / 14 Tage)" },
-    { "title": "4-wöchiger Vorbereitungsplan", "text": "Ein Plan, um fit ins Camp zu starten, mit Erstgespräch und Analyse deines Trainings.", "price": "+99 €" },
-    { "title": "Mietrad", "text": "Wir organisieren ein Triathlon- oder Rennrad zur Miete, inklusive Transport, ohne Bearbeitungsgebühr.", "price": "Auf Anfrage" }
+    { "title": "4-wöchiger Vorbereitungsplan", "text": "Ein Plan, um fit ins Camp zu starten, mit Erstgespräch und Analyse deines Trainings.", "price": "+99 €" }
   ]
 }

@@ -1,9 +1,10 @@
 {
   "title": "Training Camps",
-  "subtitle": "The different, individual and unique training camp",
+  "subtitle": "The different and unique training camp, for one or for two",
   "intro": "We design your training camp to measure: we analyse your previous training and create the perfect plan for your goals. Unforgettable weeks in Lanzarote, with pleasant temperatures all year round. Now also in a hybrid training version, with sessions at our box.",
-  "image": "/img/fotos/natacion",
+  "image": "/img/fotos/david-janina",
   "advantages": [
+    "Single or double format: come on your own or with your training partner",
     "Dates and length of your choice (subject to accommodation availability)",
     "Designed specifically for you",
     "Sessions focused on your goals and weaknesses",
@@ -15,10 +16,9 @@
   ],
   "included": [
     "Individual training plan",
-    "Lactate test at the start of the camp to set your zones",
     "Accommodation in a fully equipped apartment (up to 6 people)",
     "Airport transfer",
-    "Personal training sessions: guided bike rides, running, swimming and running technique analysis — or hybrid training sessions at the box",
+    "Personal training sessions: running and running technique analysis — or hybrid training sessions at the box",
     "Mobility and strength training",
     "Nutrition and equipment advice"
   ],
@@ -29,8 +29,6 @@
   ],
   "pricesNote": "Price per person with all services included. Other durations and companions on request.",
   "extras": [
-    { "title": "Food package", "text": "Individual nutrition plan adapted to your training and grocery shopping. Quick and easy recipes… you do the cooking!", "price": "+€299 / +€399 / +€549 (7 / 10 / 14 days)" },
-    { "title": "4-week preparation plan", "text": "A plan to arrive at the camp in shape, with an initial interview and analysis of your training.", "price": "+€99" },
-    { "title": "Rental bike", "text": "We arrange a rental triathlon or road bike, with transport included, at no handling cost.", "price": "On request" }
+    { "title": "4-week preparation plan", "text": "A plan to arrive at the camp in shape, with an initial interview and analysis of your training.", "price": "+€99" }
   ]
 }

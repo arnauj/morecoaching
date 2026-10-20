@@ -7,10 +7,8 @@ import { localeStaticPaths } from '../../i18n/config';
 
 export const getStaticPaths = localeStaticPaths;
 
-const { box, classById, t } = useI18n(Astro.url);
+const { box, t } = useI18n(Astro.url);
 const b = t.boxPage;
-
-const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.time)))].sort();
 ---
 
 <Base title={b.title} description={b.description}>
@@ -21,89 +19,8 @@ const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.
     </p>
   </PageHero>
 
-  <!-- Clases -->
-  <section class="container-x pb-24 sm:pb-32" aria-labelledby="clases-title">
-    <SectionHeading id="clases-title" kicker={b.classesKicker} title={b.classesTitle} highlight={b.classesTitle} />
-    <ul class="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {
-        box.classes.map((c, i) => (
-          <li class="card group relative overflow-hidden p-8 transition hover:border-brand/60" data-reveal style={`--d:${(i % 3) * 80}ms`}>
-            <span aria-hidden="true" class="display text-outline absolute -right-2 -bottom-6 text-8xl text-white/[0.05] transition group-hover:text-brand/30">{String(i + 1).padStart(2, '0')}</span>
-            <div class="flex items-center gap-3 font-mono text-xs text-brand">
-              <span>{c.duration}</span><span class="text-white/20">/</span><span class="text-mute uppercase">{c.level}</span>
-            </div>
-            <h3 class="display mt-3 text-4xl">{c.name}</h3>
-            <p class="mt-4 text-bone/70">{c.text}</p>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
-
-  <!-- Horario -->
-  <section class="bg-ink-800 py-24 sm:py-32" aria-labelledby="horario-title">
-    <div class="container-x">
-      <SectionHeading
-        id="horario-title"
-        kicker={b.scheduleKicker}
-        title={b.scheduleTitle}
-        highlight={b.scheduleHighlight}
-        text={box.schedule.pendiente ? b.provisional : undefined}
-      />
-
-      <!-- Móvil: lista por días -->
-      <div class="mt-12 space-y-4 md:hidden">
-        {
-          box.schedule.days.map((d) => (
-            <div class="card p-5" data-reveal>
-              <h3 class="display text-2xl text-brand">{d.day}</h3>
-              <ul class="mt-3 divide-y divide-white/8">
-                {d.slots.map((s) => (
-                  <li class="flex justify-between py-2 text-sm">
-                    <span class="font-mono text-mute">{s.time}</span>
-                    <span class="font-semibold">{classById(s.class)?.name}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
-      </div>
-
-      <!-- Escritorio: tabla -->
-      <div class="mt-12 hidden overflow-hidden rounded-3xl border border-white/8 md:block" data-reveal>
-        <table class="w-full table-fixed text-sm">
-          <thead class="bg-ink-700">
-            <tr>
-              <th scope="col" class="w-24 p-4 text-left font-mono text-xs text-mute">{b.hour}</th>
-              {box.schedule.days.map((d) => <th scope="col" class="display p-4 text-left text-xl">{d.day}</th>)}
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-white/8">
-            {
-              times.map((t) => (
-                <tr>
-                  <th scope="row" class="p-4 text-left font-mono text-mute">{t}</th>
-                  {box.schedule.days.map((d) => {
-                    const slot = d.slots.find((s) => s.time === t);
-                    const cls = slot && classById(slot.class);
-                    return (
-                      <td class="p-2">
-                        {cls && <span class="block rounded-xl bg-brand/10 px-3 py-2 font-semibold text-brand ring-1 ring-brand/30">{cls.name}</span>}
-                      </td>
-                    );
-                  })}
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
   <!-- Equipamiento -->
-  <section class="container-x py-24 sm:py-32" aria-labelledby="equipo-title">
+  <section class="container-x pb-24 sm:pb-32" aria-labelledby="equipo-title">
     <div class="grid gap-12 lg:grid-cols-2">
       <SectionHeading id="equipo-title" kicker={b.equipmentKicker} title={b.equipmentTitle} highlight={b.equipmentHighlight} />
       <ul class="grid gap-3 sm:grid-cols-2">
@@ -117,49 +34,8 @@ const times = [...new Set(box.schedule.days.flatMap((d) => d.slots.map((s) => s.
         }
       </ul>
     </div>
-  </section>
-
-  <!-- Tarifas -->
-  <section class="bg-ink-800 py-24 sm:py-32" aria-labelledby="tarifas-title">
-    <div class="container-x">
-      <SectionHeading id="tarifas-title" kicker={b.plansKicker} title={b.plansTitle} highlight={b.plansHighlight} text={box.plansNote} align="center" />
-      <ul class="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {
-          box.plans.map((p, i) => (
-            <li
-              class:list={[
-                'flex flex-col rounded-3xl p-8',
-                p.featured ? 'bg-brand text-ink lg:-translate-y-4' : 'card',
-              ]}
-              data-reveal
-              style={`--d:${i * 80}ms`}
-            >
-              {p.featured && <p class="mb-4 self-start rounded-full bg-ink px-3 py-1 text-[10px] font-bold tracking-widest text-brand uppercase">{b.recommended}</p>}
-              <h3 class="display text-3xl">{p.name}</h3>
-              <p class="mt-4">
-                <span class="display text-5xl">{p.price ?? b.ask}</span>
-                {p.price && <span class="text-sm opacity-70"> / {p.period}</span>}
-              </p>
-              <ul class="mt-6 flex-1 space-y-3 text-sm">
-                {p.features.map((f) => (
-                  <li class="flex gap-3">
-                    <span aria-hidden="true" class:list={['mt-1.5 size-1.5 shrink-0 rotate-45', p.featured ? 'bg-ink' : 'bg-brand']} />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={whatsappUrl(t.whatsapp.plan(p.name))}
-                target="_blank"
-                rel="noopener"
-                class:list={['btn mt-8', p.featured ? 'bg-ink text-bone hover:bg-ink-700' : 'btn-ghost']}
-              >
-                {b.info}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+    <div class="mt-14 text-center">
+      <a href={whatsappUrl(t.whatsapp.default)} target="_blank" rel="noopener" class="btn-primary">{b.info}</a>
     </div>
   </section>
 </Base>

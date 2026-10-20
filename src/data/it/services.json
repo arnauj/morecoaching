@@ -14,9 +14,7 @@
       "Strategia di gara e nutrizione per il tuo triathlon"
     ],
     "prices": [
-      { "label": "Abbonamento mensile", "price": "119 €", "period": "/mese", "note": "Senza vincoli né termini di disdetta." },
-      { "label": "Abbonamento 6 mesi", "price": "109 €", "period": "/mese", "note": "Perfetto per preparare una gara specifica." },
-      { "label": "Abbonamento 12 mesi", "price": "99 €", "period": "/mese", "note": "Per lavorare a lungo termine al miglior prezzo." }
+      { "label": "Abbonamento mensile", "price": "99 €", "period": "/mese", "note": "" }
     ],
     "footnote": "La versione base di TrainingPeaks è gratuita. La versione Premium (opzionale) costa 9,90 €/mese."
   },
@@ -33,42 +31,7 @@
       "Test di prestazione e aggiornamento delle zone"
     ],
     "prices": [
-      { "label": "Abbonamento mensile", "price": "Su richiesta", "period": "", "note": "Scrivici e ti prepariamo una proposta." }
-    ]
-  },
-  {
-    "id": "nutricion",
-    "title": "Nutrizione sportiva",
-    "short": "Consulenza e coaching nutrizionale con Janina, Nutrizionista con Licenza A.",
-    "image": "/img/fotos/david-janina",
-    "includes": [
-      "Colloquio iniziale su salute e alimentazione, e definizione degli obiettivi",
-      "Analisi di un diario alimentare di 7 giorni",
-      "Sessione di coaching con raccomandazioni individuali e piano d'azione",
-      "Riepilogo scritto delle misure e raccomandazioni principali",
-      "Coaching mensile: piano settimanale adattato al tuo allenamento"
-    ],
-    "prices": [
-      { "label": "Consulenza nutrizionale", "price": "169 €", "period": "", "note": "129 € abbinata a un coaching di endurance o allenamento ibrido." },
-      { "label": "Sessione di follow-up", "price": "99 €", "period": "", "note": "Analisi di un diario di 3–5 giorni e nuove raccomandazioni." },
-      { "label": "Coaching nutrizionale", "price": "99 €", "period": "/mese", "note": "89 €/mese abbinato a un coaching di endurance o allenamento ibrido." }
-    ]
-  },
-  {
-    "id": "diagnostico",
-    "title": "Diagnostica della prestazione",
-    "short": "Analisi del tuo allenamento, test del lattato e spiroergometria per allenarti con i dati.",
-    "image": "/img/fotos/ironman-lanzarote",
-    "includes": [
-      "Analisi di allenamento e salute con i tuoi dati (Strava, TrainingPeaks…)",
-      "Test del lattato per definire le zone di allenamento",
-      "Sessione di coaching di 60 minuti con i risultati",
-      "Raccomandazioni su allenamento, nutrizione, attrezzatura e strategia",
-      "Premium: pianificazione annuale + piano di esempio di 4 settimane"
-    ],
-    "prices": [
-      { "label": "Level Up Your Training · Basic", "price": "99 €", "period": "", "note": "Analisi + sessione di 60 min." },
-      { "label": "Level Up Your Training · Premium", "price": "199 €", "period": "", "note": "Basic + pianificazione annuale e piano di 4 settimane." }
+      { "label": "Abbonamento mensile", "price": "69 €", "period": "/mese", "note": "" }
     ]
   }
 ]
