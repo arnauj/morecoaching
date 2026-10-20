@@ -10,7 +10,7 @@ const cards = [
 ];
 ---
 
-<div class="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-5">
+<div class="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3">
   {
     cards.map((c, i) => (
       <a
@@ -19,7 +19,7 @@ const cards = [
         data-reveal
         style={`--d:${i * 80}ms`}
       >
-        <Photo src={c.image} alt="" sizes="(min-width:1024px) 20vw, (min-width:640px) 50vw, 80vw" class="absolute inset-0 -z-10 h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+        <Photo src={c.image} alt="" sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 80vw" class="absolute inset-0 -z-10 h-full w-full object-cover transition duration-700 group-hover:scale-110" />
         <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
         <h3 class="display text-2xl leading-none">{c.title}</h3>
         <p class="mt-2 text-sm text-bone/70">{c.text}</p>

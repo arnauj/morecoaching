@@ -30,34 +30,10 @@ export interface Hybrid {
   faq: { q: string; a: string }[];
 }
 
-export interface BoxClass {
-  id: string;
-  name: string;
-  duration: string;
-  level: string;
-  text: string;
-}
-
-export interface Plan {
-  name: string;
-  /** null = precio pendiente de publicar */
-  price: string | null;
-  period: string;
-  featured: boolean;
-  features: string[];
-}
-
 export interface Box {
   hero: { kicker: string; title: string; text: string };
   location: { pendiente: boolean; text: string; mapsUrl: string };
   equipment: string[];
-  classes: BoxClass[];
-  schedule: {
-    pendiente: boolean;
-    days: { day: string; slots: { time: string; class: string }[] }[];
-  };
-  plans: Plan[];
-  plansNote: string;
 }
 
 export interface Price {

@@ -69,6 +69,5 @@ export function useI18n(pageUrl: URL) {
     t: ui[lang],
     ...content,
     link: (p: string) => localize(lang, p),
-    classById: (id: string) => content.box.classes.find((c) => c.id === id),
   };
 }

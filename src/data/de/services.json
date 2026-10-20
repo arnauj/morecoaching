@@ -14,9 +14,7 @@
       "Wettkampf- und Ernährungsstrategie für deinen Triathlon"
     ],
     "prices": [
-      { "label": "Monatsabo", "price": "119 €", "period": "/Monat", "note": "Keine Mindestlaufzeit, keine Kündigungsfrist." },
-      { "label": "6-Monats-Abo", "price": "109 €", "period": "/Monat", "note": "Perfekt zur Vorbereitung auf einen bestimmten Wettkampf." },
-      { "label": "12-Monats-Abo", "price": "99 €", "period": "/Monat", "note": "Für langfristiges Arbeiten zum besten Preis." }
+      { "label": "Monatsabo", "price": "99 €", "period": "/Monat", "note": "" }
     ],
     "footnote": "Die Basisversion von TrainingPeaks ist kostenlos. Die Premium-Version (optional) kostet 9,90 €/Monat."
   },
@@ -33,42 +31,7 @@
       "Leistungstests und Anpassung der Zonen"
     ],
     "prices": [
-      { "label": "Monatsabo", "price": "Auf Anfrage", "period": "", "note": "Schreib uns und wir erstellen dir ein Angebot." }
-    ]
-  },
-  {
-    "id": "nutricion",
-    "title": "Sporternährung",
-    "short": "Ernährungsberatung und -coaching mit Janina, Ernährungsberaterin mit A-Lizenz.",
-    "image": "/img/fotos/david-janina",
-    "includes": [
-      "Erstgespräch zu Gesundheit und Ernährung sowie Zieldefinition",
-      "Analyse eines 7-tägigen Ernährungsprotokolls",
-      "Coaching-Sitzung mit individuellen Empfehlungen und Maßnahmenplan",
-      "Schriftliche Zusammenfassung der wichtigsten Maßnahmen und Empfehlungen",
-      "Monatliches Coaching: Wochenplan abgestimmt auf dein Training"
-    ],
-    "prices": [
-      { "label": "Ernährungsberatung", "price": "169 €", "period": "", "note": "129 € in Kombination mit einem Ausdauer- oder Hybrid-Training-Coaching." },
-      { "label": "Folgesitzung", "price": "99 €", "period": "", "note": "Analyse eines 3–5-tägigen Protokolls und neue Empfehlungen." },
-      { "label": "Ernährungscoaching", "price": "99 €", "period": "/Monat", "note": "89 €/Monat in Kombination mit einem Ausdauer- oder Hybrid-Training-Coaching." }
-    ]
-  },
-  {
-    "id": "diagnostico",
-    "title": "Leistungsdiagnostik",
-    "short": "Analyse deines Trainings, Laktattest und Spiroergometrie, um mit Daten zu trainieren.",
-    "image": "/img/fotos/ironman-lanzarote",
-    "includes": [
-      "Trainings- und Gesundheitsanalyse mit deinen Daten (Strava, TrainingPeaks …)",
-      "Laktattest zur Bestimmung der Trainingszonen",
-      "60-minütige Coaching-Sitzung mit den Ergebnissen",
-      "Empfehlungen zu Training, Ernährung, Material und Strategie",
-      "Premium: Jahresplanung + 4-wöchiger Beispielplan"
-    ],
-    "prices": [
-      { "label": "Level Up Your Training · Basic", "price": "99 €", "period": "", "note": "Analyse + 60-min-Sitzung." },
-      { "label": "Level Up Your Training · Premium", "price": "199 €", "period": "", "note": "Basic + Jahresplanung und 4-Wochen-Plan." }
+      { "label": "Monatsabo", "price": "69 €", "period": "/Monat", "note": "" }
     ]
   }
 ]

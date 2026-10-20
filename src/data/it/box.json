@@ -10,62 +10,11 @@
     "mapsUrl": "https://maps.google.com/?q=Órzola,Lanzarote"
   },
   "equipment": [
-    "Slitte e pista di spinta/traino",
-    "SkiErg",
-    "Vogatori ad aria",
-    "Air bike",
-    "Wall ball e bersagli regolamentari",
-    "Sandbag e kettlebell",
-    "Zona forza con rack e bilancieri",
+    "Slitta & pista di spinta/traino",
+    "Ergometri (ski, row, bike)",
+    "Sandbag & kettlebell",
+    "Wall ball",
+    "Zona forza con rack, bilancieri & manubri",
     "Zona mobilità e recupero"
-  ],
-  "classes": [
-    { "id": "hybrid-class", "name": "Hybrid Class", "duration": "60 min", "level": "Tutti i livelli", "text": "La lezione di punta: intervalli di corsa combinati con stazioni funzionali. Motore, forza e tecnica in ogni sessione." },
-    { "id": "engine", "name": "Engine", "duration": "45 min", "level": "Tutti i livelli", "text": "Lavoro aerobico su ergometri e corsa. Costruisci la base che ti permetterà di finire forte." },
-    { "id": "strength", "name": "Hybrid Strength", "duration": "60 min", "level": "Intermedio", "text": "Forza funzionale applicata: spinta, trazione, affondi e presa con il battito alto." },
-    { "id": "simulation", "name": "Race Simulation", "duration": "90 min", "level": "Avanzato", "text": "Simulazione di una gara ibrida completa o a metà, cronometrata, con analisi dei tuoi tempi per stazione." },
-    { "id": "doubles", "name": "Doubles Training", "duration": "60 min", "level": "Tutti i livelli", "text": "Allenati in coppia: strategia dei cambi, divisione del lavoro e ritmo condiviso." }
-  ],
-  "schedule": {
-    "pendiente": true,
-    "days": [
-      { "day": "Lunedì", "slots": [{ "time": "07:00", "class": "hybrid-class" }, { "time": "18:30", "class": "engine" }, { "time": "19:45", "class": "hybrid-class" }] },
-      { "day": "Martedì", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hybrid-class" }, { "time": "19:45", "class": "strength" }] },
-      { "day": "Mercoledì", "slots": [{ "time": "07:00", "class": "engine" }, { "time": "18:30", "class": "doubles" }, { "time": "19:45", "class": "hybrid-class" }] },
-      { "day": "Giovedì", "slots": [{ "time": "07:00", "class": "hybrid-class" }, { "time": "18:30", "class": "strength" }, { "time": "19:45", "class": "engine" }] },
-      { "day": "Venerdì", "slots": [{ "time": "07:00", "class": "strength" }, { "time": "18:30", "class": "hybrid-class" }] },
-      { "day": "Sabato", "slots": [{ "time": "09:30", "class": "simulation" }, { "time": "11:30", "class": "doubles" }] }
-    ]
-  },
-  "plans": [
-    {
-      "name": "Drop-in",
-      "price": null,
-      "period": "sessione",
-      "featured": false,
-      "features": ["1 lezione a scelta", "Ideale se sei di passaggio a Lanzarote", "Prenotazione via WhatsApp"]
-    },
-    {
-      "name": "Box 2×",
-      "price": null,
-      "period": "mese",
-      "featured": false,
-      "features": ["2 lezioni a settimana", "Accesso a tutte le lezioni", "Monitoraggio dei tuoi record"]
-    },
-    {
-      "name": "Box Illimitato",
-      "price": null,
-      "period": "mese",
-      "featured": true,
-      "features": ["Lezioni illimitate", "Race Simulation mensile inclusa", "Test di prestazione trimestrale", "Community e trasferte alle gare"]
-    },
-    {
-      "name": "Race Prep 1:1",
-      "price": null,
-      "period": "mese",
-      "featured": false,
-      "features": ["Piano individuale verso la tua gara ibrida", "Box illimitato incluso", "Strategia di gara e nutrizione", "Contatto quotidiano via WhatsApp"]
-    }
-  ],
-  "plansNote": "Le tariffe di apertura saranno disponibili a breve. Scrivici e te le inviamo appena pronte."
+  ]
 }

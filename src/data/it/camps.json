@@ -1,9 +1,10 @@
 {
   "title": "Training Camp",
-  "subtitle": "Il campus di allenamento diverso, individuale e unico",
+  "subtitle": "Il campus di allenamento diverso e unico, in formato individuale o doppio",
   "intro": "Progettiamo il tuo stage di allenamento su misura: analizziamo il tuo allenamento precedente e creiamo il piano perfetto in base ai tuoi obiettivi. Settimane indimenticabili a Lanzarote, con temperature piacevoli tutto l'anno. Ora anche in versione allenamento ibrido, con sessioni nel nostro box.",
-  "image": "/img/fotos/natacion",
+  "image": "/img/fotos/david-janina",
   "advantages": [
+    "Formato individuale o doppio: vieni da solo o con il tuo compagno di allenamento",
     "Date e durata a tua scelta (secondo disponibilità dell'alloggio)",
     "Progettato apposta per te",
     "Sessioni orientate ai tuoi obiettivi e ai tuoi punti deboli",
@@ -15,10 +16,9 @@
   ],
   "included": [
     "Pianificazione individuale dell'allenamento",
-    "Test del lattato all'inizio del campus per fissare le zone",
     "Alloggio in appartamento completamente attrezzato (fino a 6 persone)",
     "Transfer dall'aeroporto",
-    "Sessioni di allenamento personale: uscite in bici guidate, corsa, analisi tecnica di nuoto e corsa — o sessioni di allenamento ibrido nel box",
+    "Sessioni di allenamento personale: corsa e analisi tecnica della corsa — o sessioni di allenamento ibrido nel box",
     "Allenamento di mobilità e forza",
     "Consulenza su nutrizione e attrezzatura"
   ],
@@ -29,8 +29,6 @@
   ],
   "pricesNote": "Prezzo a persona con tutti i servizi inclusi. Altre durate e accompagnatori su richiesta.",
   "extras": [
-    { "title": "Pacchetto alimentazione", "text": "Piano nutrizionale individuale adattato al tuo allenamento e spesa degli alimenti. Ricette facili e veloci… cucini tu!", "price": "+299 € / +399 € / +549 € (7 / 10 / 14 giorni)" },
-    { "title": "Piano di preparazione di 4 settimane", "text": "Un piano per arrivare in forma al campus, con colloquio iniziale e analisi del tuo allenamento.", "price": "+99 €" },
-    { "title": "Bici a noleggio", "text": "Organizziamo una bici da triathlon o da strada a noleggio, con trasporto incluso, senza costi di gestione.", "price": "Su richiesta" }
+    { "title": "Piano di preparazione di 4 settimane", "text": "Un piano per arrivare in forma al campus, con colloquio iniziale e analisi del tuo allenamento.", "price": "+99 €" }
   ]
 }
